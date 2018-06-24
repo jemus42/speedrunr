@@ -1,0 +1,16 @@
+Package: speedrunr
+Version: 0.0.0.9000
+Title: Access Data From 'speedrun.com'
+Description: What the package does (one paragraph).
+Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Imports: 
+    httr,
+    purrr,
+    hms,
+    lubridate
+Suggests: 
+    testthat
