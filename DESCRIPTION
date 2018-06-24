@@ -1,7 +1,8 @@
 Package: speedrunr
 Version: 0.0.0.9000
 Title: Access Data From 'speedrun.com'
-Description: What the package does (one paragraph).
+Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
+    the ids of games and categories which are required to access run data.
 Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -11,6 +12,9 @@ Imports:
     httr,
     purrr,
     hms,
-    lubridate
+    lubridate,
+    tibble
 Suggests: 
     testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
