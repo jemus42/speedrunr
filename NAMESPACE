@@ -3,3 +3,4 @@
 export(get_categories)
 export(get_games)
 export(get_platforms)
+export(get_runs)

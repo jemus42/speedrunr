@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+library(speedrunr)
 ```
 # speedrunr
 
@@ -26,7 +28,62 @@ remotes::install_github("jemus42/speedrunr")
 
 ## Example
 
-The package does not have any functionality yet.
+Let's say you want to plot the times of all *Ocarina of TIme 100%* runs.  
+Let's get started:
+
+```{r, message=FALSE, error=FALSE}
+library(dplyr)
+library(knitr)
+```
+
+
+### Identifiyng the game you're looking for
+
+You can either search for "Ocarina of Time", or supply `'oot'`, the game's abbreviation on speedrun.com.
+
+```{r}
+games <- get_games(name = "Ocarina of Time")
+
+kable(games)
+```
+
+Turns out `j1l9qz1g` is the id we're looking for.
+
+### Get the game's categories
+
+```{r}
+categories <- get_categories(id = "j1l9qz1g")
+
+categories %>%
+  select(-rules) %>%
+  kable()
+```
+
+So apparently we're looking for `q255jw2o`, the full-game 100% category.
+
+### Get the runs in that category
+
+Now we can fetch the runs. By default, 100 runs are returned, ordered by submit date in descending order, so newest runs first.
+
+```{r}
+runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
+```
+
+And now we can basically re-create the leaderboard, but including obsoleted runs:
+
+```{r}
+library(hms)
+
+runs %>%
+  arrange(time_primary) %>%
+  head(20) %>%
+  select(submitted, time_primary, player_url) %>%
+  mutate(time_primary = hms(seconds = time_primary)) %>%
+  kable()
+```
+
+Resolving user id's to usernames and e.g. platform id to platform name is to be implented.
+
 
 ## Code of Conduct
 
