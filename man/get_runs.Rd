@@ -7,7 +7,7 @@
 \url{https://github.com/speedruncomorg/api/blob/master/version1/runs.md#get-runs}
 }
 \usage{
-get_runs(game, category, max = 100, ...)
+get_runs(game, category, max = 100, status = "verified", ...)
 }
 \arguments{
 \item{game}{The game's id.}
@@ -15,6 +15,8 @@ get_runs(game, category, max = 100, ...)
 \item{category}{The category's id.}
 
 \item{max}{The number of runs to return, default is \code{100}.}
+
+\item{status}{Filter by run status, default is \code{"verified"}. Leave blank for all runs.}
 
 \item{...}{Optional arguments passed to API.}
 }

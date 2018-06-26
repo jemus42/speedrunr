@@ -15,17 +15,19 @@
 get_games <- function(name = "sm64", abbreviation = NULL, ...) {
 
   if (!is.null(abbreviation)) {
-    name <- NULL
+    name <- ""
+  } else {
+    abbreviation <- ""
   }
 
   url <- httr::modify_url(url = paste0(getOption("speedruncom_base"), "games"),
-                          query = list(name = name, ...))
+                          query = list(name = name, abbreviation = abbreviation, ...))
   res <- httr::GET(url)
   httr::warn_for_status(res)
   res <- httr::content(res)
   data <- res$data
 
-  games <- purrr::map_df(data, function(x) {
+  extract_gamedata <- function(x) {
     tibble::tibble(
       id = x$id,
       name_international = x$names$international,
@@ -35,9 +37,11 @@ get_games <- function(name = "sm64", abbreviation = NULL, ...) {
       released = lubridate::ymd(x$`release-date`),
       released_year = x$released,
       romhack = x$romhack,
-      created = lubridate::ymd_hms(x$created)
+      created = lubridate::ymd_hms(purrr::pluck(x, "created", .default = NA))
     )
-  })
+  }
+
+  games <- purrr::map_df(data, extract_gamedata)
 
   games[order(games$created), ]
 }

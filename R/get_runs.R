@@ -3,6 +3,7 @@
 #' @param game The game's id.
 #' @param category The category's id.
 #' @param max The number of runs to return, default is `100`.
+#' @param status Filter by run status, default is `"verified"`. Leave blank for all runs.
 #' @param ... Optional arguments passed to API.
 #'
 #' @return A [tibble::tibble] of runs.
@@ -13,14 +14,20 @@
 #' # Get all Ocarina of Time 100% runs:
 #' runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
 #' }
-get_runs <- function(game, category, max = 100, ...) {
+get_runs <- function(game, category, max = 100, status = "verified", ...) {
 
-  url <- httr::modify_url(url = paste0(getOption("speedruncom_base"), "runs"),
-                          query = list(game = game, category = category, max = max,
-                                       orderby = "submitted", direction = "desc", ...))
-  res <- httr::GET(url)
-  httr::warn_for_status(res)
-  res <- httr::content(res)
+  res <- sr_get("runs", game = game, category = category, max = max,
+                status = status,
+                orderby = "submitted", direction = "desc", ...)
+
+  next_url <- purrr::map_df(res$pagination$links, tibble::as_tibble)
+
+  if (!(identical(next_url, tibble::tibble()))) {
+    next_url <- next_url$uri[next_url$rel == "next"]
+  } else {
+    next_url <- NA
+  }
+
   data <- res$data
 
   runs <- purrr::map_df(data, function(x) {
@@ -28,23 +35,32 @@ get_runs <- function(game, category, max = 100, ...) {
       id = x$id,
       weblink = x$weblink,
       game = x$game,
-      level = ifelse(is.null(x$level), NA, x$level),
+      level = pluck(x, "level", .default = NA),
       category = x$category,
-      videos = unname(unlist(purrr::flatten(x$videos))),
+      #videos = pluck(x, "videos", 1, "uri", .default = ""),
       status = x$status$status,
       comment = ifelse(is.null(x$comment), NA, x$comment),
-      player_id = purrr::map_chr(x$players, "id"),
-      player_url = purrr::map_chr(x$players, "uri"),
+      player_id = pluck(x, "players", 1, "id", .default = NA),
+      player_url = pluck(x, "players", 1, "uri", .default = NA),
       date = lubridate::ymd(x$date),
       submitted = lubridate::ymd_hms(x$submitted),
       time_primary = x$times$primary_t,
       time_realtime = x$times$realtime_t,
-      system_platform = x$system$platform,
-      system_emulated = x$system$emulated,
-      system_region = ifelse(is.null(x$system$region), NA, x$system$region)
+      system_platform = pluck(x, "system", "platform", .default = NA),
+      system_emulated = pluck(x, "system", "emulated", .default = NA),
+      system_region = pluck(x, "system", "region", .default = NA)
     )
   })
 
-  runs
+  # Pagination is hard and this doesn't work properly yet
+  if (!is.na(next_url) & nrow(runs) < max) {
+    offset <- purrr::pluck(httr::parse_url(next_url), "query", "offset", .default = "")
+    rbind(
+      runs,
+      get_runs(game = game, category = category, max = max, offset = offset)
+    )
+  } else {
+    runs
+  }
 
 }
