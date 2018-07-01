@@ -11,7 +11,6 @@
 #' get_user(id = "e8e5v680")
 #' }
 get_user <- function(id, ...) {
-
   if (is.na(id)) return(NA)
 
   path <- paste0(c("users", id), collapse = "/")

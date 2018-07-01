@@ -1,21 +1,21 @@
 Package: speedrunr
-Version: 0.1
 Title: Access Data From 'speedrun.com'
+Version: 0.1
+Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
 Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
     the ids of games and categories which are required to access run data.
-Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-ByteCompile: true
 Imports: 
-    httr,
-    purrr,
     hms,
+    httr,
     lubridate,
-    tibble,
-    stats
+    purrr,
+    stats,
+    tibble
 Suggests: 
     testthat
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1
