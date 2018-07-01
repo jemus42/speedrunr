@@ -26,3 +26,29 @@ find_records <- function(runs, by = "date") {
 
   runs
 }
+
+#' Detect Outliers
+#'
+#' @param x A `numeric` vector.
+#' @param method Currently only `quantile` is supported.
+#' @param direction `upper`, (default) `lower` or `both`.
+#'
+#' @return A `logical` vector of the same length as `x`
+#' @export
+#'
+#' @examples
+#' is_outlier(runif(20))
+is_outlier <- function(x, method = "quantile", direction = "upper") {
+  iqr <- IQR(x, na.rm = TRUE)
+  upper <- median(x, na.rm = TRUE) + 1.5 * iqr
+  lower <- median(x, na.rm = TRUE) - 1.5 * iqr
+
+  if (direction == "upper") {
+    x >= upper
+  } else if (direction == "lower") {
+    x <= lower
+  } else if (direction == "both") {
+    x <= lower & x >= upper
+  }
+
+}

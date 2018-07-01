@@ -27,6 +27,7 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
   } else {
     next_url <- NA
   }
+  if (is.null(next_url)) next_url <- NA
 
   data <- res$data
 
@@ -35,27 +36,27 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
       id = x$id,
       weblink = x$weblink,
       game = x$game,
-      level = pluck(x, "level", .default = NA),
+      level = purrr::pluck(x, "level", .default = NA),
       category = x$category,
       #videos = pluck(x, "videos", 1, "uri", .default = ""),
       status = x$status$status,
       comment = ifelse(is.null(x$comment), NA, x$comment),
-      player_id = pluck(x, "players", 1, "id", .default = NA),
-      player_url = pluck(x, "players", 1, "uri", .default = NA),
+      player_id = purrr::pluck(x, "players", 1, "id", .default = NA),
+      player_url = purrr::pluck(x, "players", 1, "uri", .default = NA),
       date = lubridate::ymd(x$date),
       submitted = lubridate::ymd_hms(x$submitted),
       time_primary = x$times$primary_t,
       time_realtime = x$times$realtime_t,
-      system_platform = pluck(x, "system", "platform", .default = NA),
-      system_emulated = pluck(x, "system", "emulated", .default = NA),
-      system_region = pluck(x, "system", "region", .default = NA)
+      system_platform = purrr::pluck(x, "system", "platform", .default = NA),
+      system_emulated = purrr::pluck(x, "system", "emulated", .default = NA),
+      system_region = purrr::pluck(x, "system", "region", .default = NA)
     )
   })
 
   # Pagination is hard and this doesn't work properly yet
-  # cat("\nnrow(runs) = ", nrow(runs))
-  # cat("\nmax = ", max)
-  if (!is.na(next_url) & nrow(runs) < max) {
+   cat("\nnrow(runs) = ", nrow(runs))
+   cat("\nmax = ", max)
+  if (!is.na(next_url) & nrow(runs) < max & nrow(runs) != 0) {
     offset <- purrr::pluck(httr::parse_url(next_url), "query", "offset", .default = "")
     max <- max - as.numeric(offset)
     runs <- rbind(

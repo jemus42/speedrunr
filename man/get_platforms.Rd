@@ -2,25 +2,26 @@
 % Please edit documentation in R/get_platforms.R
 \name{get_platforms}
 \alias{get_platforms}
-\title{Get All Platforms}
+\title{Get Platforms}
 \source{
 \url{https://github.com/speedruncomorg/api/blob/master/version1/platforms.md}
 }
 \usage{
-get_platforms(max = 100, ...)
+get_platforms(id = NULL, output = "df")
 }
 \arguments{
-\item{max}{How many results to return. Default is \code{100}.}
+\item{id}{Optional \code{id} of a specific platform, normally all platforms are returned.}
 
-\item{...}{Optional arguments passed to the API}
+\item{output}{Return a \code{df} (default) or named \code{list}.}
 }
 \value{
 A \link[tibble:tibble]{tibble::tibble} with platform info and ids.
 }
 \description{
-Get All Platforms
+Get Platforms
 }
-\examples{
+\note{
+Currently the \code{released} variables is dropped on \code{list} output because I am bad at lists.
 \dontrun{
 get_platforms()
 }

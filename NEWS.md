@@ -7,4 +7,7 @@
     - `get_categories`: Get a game's categories (needs `id` as per `get_games`).
     - `get_runs`: Get runs. Needs `game` and `category` to be useful, hence the previous functions.
     - `get_variables`: To resolve category/game-specific variables, e.g. `150cc` in Mario Kart.
+    - `get_regions`: Get all the regions.
     - `find_records`: To append a boolean `record`-column on a `run` tbl, denoting records.
+    - `is_outlier`: For quick outlier detection based on IQR.
+    

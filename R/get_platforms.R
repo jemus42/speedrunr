@@ -1,33 +1,40 @@
-#' Get All Platforms
+#' Get Platforms
 #'
-#' @param max How many results to return. Default is `100`.
-#' @param ... Optional arguments passed to the API
-#'
+#' @param id Optional `id` of a specific platform, normally all platforms are returned.
+#' @inheritParams get_regions
 #' @return A [tibble::tibble] with platform info and ids.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/platforms.md>
 #' @examples
+#' @note Currently the `released` variables is dropped on `list` output because I am bad at lists.
 #' \dontrun{
 #' get_platforms()
 #' }
-get_platforms <- function(max = 100, ...) {
-  url <- httr::modify_url(url = paste0(getOption("speedruncom_base"), "platforms"),
-                          query = list(max = max, ...))
-  res <- httr::GET(url)
-  httr::warn_for_status(res)
-  res <- httr::content(res)
+get_platforms <- function(id = NULL, output = "df") {
+
+  path <- paste(c("platforms", id), collapse = "/", sep = "")
+  res  <- sr_get(path = path, max = 200)
   data <- res$data
 
-  platforms <- purrr::map_df(data, function(x) {
+  extract_platforms <- function(x) {
     tibble::tibble(
       id = x$id,
       name = x$name,
-      released = x$released,
-      link_self = x$links[[1]]$uri,
-      link_games = x$links[[2]]$uri,
-      link_runs = x$links[[3]]$uri
+      released = x$released
     )
-  })
+  }
 
-  platforms[order(platforms$released), ]
+  if (is.null(id)) {
+    platforms <- purrr::map_df(data, extract_platforms)
+  } else {
+    platforms <- extract_platforms(data)
+  }
+
+  if (output == "df") {
+    platforms[order(platforms$released), ]
+  } else if (output == "list") {
+    lst <- as.list(platforms$name)
+    names(lst) <- platforms$id
+    lst
+  }
 }
