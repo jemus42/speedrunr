@@ -1,5 +1,5 @@
 Package: speedrunr
-Version: 0.0.0.9000
+Version: 0.1
 Title: Access Data From 'speedrun.com'
 Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
     the ids of games and categories which are required to access run data.
