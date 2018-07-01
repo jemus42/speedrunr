@@ -1,8 +1,11 @@
 # speedrunr 0.1.9000
 
+* Added datasets: `platforms` and `regions` for easier id resolving.
 * Added functions:
     - `get_leaderboards`: Get... a leaderboard.
     - `get_variables_game`: Get a game's variables/values.
+    - `add_platforms` and `add_regions`: Use packaged data to resolve these in run tbls.
+    - `add_players`: Similiar use, but actually does API calls, but only one per unique `player_id`.
 * API changes:
     - rename `get_variables` to `get_variable` as it only works on a single variable anyway.
 

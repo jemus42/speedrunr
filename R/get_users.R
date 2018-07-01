@@ -14,7 +14,6 @@ get_user <- function(id, ...) {
   if (is.na(id)) return(NA)
 
   path <- paste0(c("users", id), collapse = "/")
-
   res <- sr_get(path, ...)
   data <- res$data
 

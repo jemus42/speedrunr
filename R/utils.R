@@ -20,7 +20,7 @@ find_records <- function(runs, by = "date") {
   runs <- runs[order(runs[[by]]), ]
 
   runs$record <- purrr::map_lgl(seq_len(nrow(runs)), function(x) {
-    runs$time[x] == min(runs$time[seq_len(x)])
+    runs$time_primary[x] == min(runs$time_primary[seq_len(x)])
   })
 
   runs
@@ -48,4 +48,64 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
   } else if (direction == "both") {
     x <= lower & x >= upper
   }
+}
+
+#' Join Platform/Region info to Runs
+#'
+#' @rdname add_miscdata
+#'
+#' @param runs A `tbl` of runs as returned by `get_runs` or `get_leaderboards`
+#' @param platforms,regions The platform/region data to use. Uses packaged datasets by default.
+#' @return The input `runs` tbl with resolved `system_`* variables.
+#' @export
+#' @import dplyr
+#' @examples
+#' \dontrun{
+#' runs <- get_leaderboards(game = "j1l9qz1g")
+#'
+#' add_platforms(runs)
+#' add_regions(runs)
+#' }
+add_platforms <- function(runs, platforms = speedrunr::platforms) {
+  # For R CMD check's global variable thing
+  released <- name <- platform <- NULL
+  left_join(
+    runs,
+    platforms %>% select(-released) %>% rename(platform = name),
+    by = c("system_platform" = "id")
+  ) %>%
+    mutate(system_platform = platform) %>%
+    select(-platform)
+}
+
+#' @rdname add_miscdata
+#' @import dplyr
+#' @export
+add_regions <- function(runs, regions = speedrunr::regions) {
+  # For R CMD check's global variable thing
+  name <- region <- NULL
+  left_join(
+    runs,
+    regions %>% rename(region = name),
+    by = c("system_region" = "id")
+  ) %>%
+    mutate(system_region = region) %>%
+    select(-region)
+}
+
+#' @rdname add_miscdata
+#' @import dplyr
+#' @export
+add_players <- function(runs) {
+  # For R CMD check's global variable thing
+  player_id <- NULL
+  runs %>%
+    select(player_id) %>%
+    distinct() %>%
+    mutate(player_name = purrr::map_chr(player_id,
+                                 ~purrr::pluck(get_user(id = .x),
+                                               "name_int", .default = NA))) %>%
+    full_join(runs,
+              by = c("player_id" = "player_id")
+    )
 }

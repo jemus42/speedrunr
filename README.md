@@ -158,11 +158,11 @@ get_regions() %>%
 | p2g50lnk | KOR / NTSC |
 | pr184lqn | USA / NTSC |
 
-Anf for users, there’s `get_user`.  
+And for users, there’s `get_user`.  
 I’ll probably add the option to embed user information in `get_runs` to
-make that a little easiert, because currently you either have to do a
-lot of api calls or do a cumbersome setup to get your usernames in a
-`runs` dataset.
+make that a little easier, because currently you either have to do a lot
+of api calls or do a cumbersome setup to get your usernames in a `runs`
+dataset.
 
 ## Code of Conduct
 

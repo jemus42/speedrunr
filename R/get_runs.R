@@ -51,6 +51,9 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
 
 #' @keywords internal
 extract_run <- function(x) {
+  # For R CMD check's global variable thing
+  time_primary <- NULL
+
   tibble::tibble(
     id = x$id,
     weblink = x$weblink,
@@ -67,6 +70,7 @@ extract_run <- function(x) {
     time_primary = purrr::pluck(x, "times", "primary_t", .default = NA),
     time_realtime = purrr::pluck(x, "times", "realtime_t", .default = NA),
     time_ingame = purrr::pluck(x, "times", "ingame_t", .default = NA),
+    time_hms = hms::hms(seconds = time_primary),
     system_platform = purrr::pluck(x, "system", "platform", .default = NA),
     system_emulated = purrr::pluck(x, "system", "emulated", .default = NA),
     system_region = purrr::pluck(x, "system", "region", .default = NA)

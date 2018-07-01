@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Detect Outliers — is_outlier • speedrunr</title>
+<title>Get a Game's Variables — get_variables_game • speedrunr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Detect Outliers — is_outlier" />
+<meta property="og:title" content="Get a Game's Variables — get_variables_game" />
 
-<meta property="og:description" content="Detect Outliers" />
+<meta property="og:description" content="Get a Game's Variables" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -95,50 +95,55 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Detect Outliers</h1>
+    <h1>Get a Game's Variables</h1>
     
-    <div class="hidden name"><code>is_outlier.Rd</code></div>
+    <div class="hidden name"><code>get_variables_game.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Detect Outliers</p>
+    <p>Get a Game's Variables</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>is_outlier</span>(<span class='no'>x</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"quantile"</span>, <span class='kw'>direction</span> <span class='kw'>=</span> <span class='st'>"upper"</span>)</pre>
+    <pre class="usage"><span class='fu'>get_variables_game</span>(<span class='no'>game</span>, <span class='kw'>list_column</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A <code>numeric</code> vector.</p></td>
+      <th>game</th>
+      <td><p>The game's <code>id</code></p></td>
     </tr>
     <tr>
-      <th>method</th>
-      <td><p>Currently only <code>quantile</code> is supported.</p></td>
-    </tr>
-    <tr>
-      <th>direction</th>
-      <td><p><code>upper</code>, (default) <code>lower</code> or <code>both</code>.</p></td>
+      <th>list_column</th>
+      <td><p><code>[FALSE]</code> Whether to return a list column or a flat <code>tbl</code>.</p></td>
     </tr>
     </table>
     
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-gamesidvariables'>https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-gamesidvariables</a></p>
+    
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>logical</code> vector of the same length as <code>x</code></p>
+    <p>A <a href='http://www.rdocumentation.org/packages/tibble/topics/tibble'>tibble::tibble</a> with one row per <code>variable</code> <em>or</em>
+per <code>value</code> depending on <code>list_column</code></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>is_outlier</span>(<span class='fu'>runif</span>(<span class='fl'>20</span>))</div><div class='output co'>#&gt;  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-#&gt; [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</div></pre>
+    <pre class="examples"><div class='input'># Get the variables for Ocarina of Time
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>get_variables_game</span>(<span class='kw'>game</span> <span class='kw'>=</span> <span class='st'>"j1l9qz1g"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
+      <li><a href="#source">Source</a></li>
+
       <li><a href="#value">Value</a></li>
       
       <li><a href="#examples">Examples</a></li>
