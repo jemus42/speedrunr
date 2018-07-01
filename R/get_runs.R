@@ -54,8 +54,8 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
   })
 
   # Pagination is hard and this doesn't work properly yet
-   cat("\nnrow(runs) = ", nrow(runs))
-   cat("\nmax = ", max)
+   # cat("\nnrow(runs) = ", nrow(runs))
+   # cat("\nmax = ", max)
   if (!is.na(next_url) & nrow(runs) < max & nrow(runs) != 0) {
     offset <- purrr::pluck(httr::parse_url(next_url), "query", "offset", .default = "")
     max <- max - as.numeric(offset)
