@@ -11,9 +11,8 @@
 #' get_platforms()
 #' }
 get_platforms <- function(id = NULL, output = "df") {
-
   path <- paste(c("platforms", id), collapse = "/", sep = "")
-  res  <- sr_get(path = path, max = 200)
+  res <- sr_get(path = path, max = 200)
   data <- res$data
 
   extract_platforms <- function(x) {

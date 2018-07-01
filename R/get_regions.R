@@ -12,7 +12,7 @@
 #' }
 get_regions <- function(id = NULL, output = "df") {
   path <- paste(c("regions", id), collapse = "/", sep = "")
-  res  <- sr_get(path = path)
+  res <- sr_get(path = path)
   data <- res$data
 
   extract_region <- function(x) {
@@ -38,5 +38,4 @@ get_regions <- function(id = NULL, output = "df") {
     warning("Unknown output option. Have a df then.")
     df
   }
-
 }

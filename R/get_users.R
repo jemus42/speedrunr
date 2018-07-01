@@ -11,7 +11,6 @@
 #' get_user(id = "e8e5v680")
 #' }
 get_user <- function(id, ...) {
-
   path <- paste("users", id, sep = "/")
 
   res <- sr_get(path, ...)

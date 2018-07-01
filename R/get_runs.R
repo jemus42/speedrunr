@@ -15,10 +15,11 @@
 #' runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
 #' }
 get_runs <- function(game, category, max = 100, status = "verified", ...) {
-
-  res <- sr_get("runs", game = game, category = category, max = max,
-                status = status,
-                orderby = "submitted", direction = "desc", ...)
+  res <- sr_get("runs",
+    game = game, category = category, max = max,
+    status = status,
+    orderby = "submitted", direction = "desc", ...
+  )
 
   next_url <- purrr::map_df(res$pagination$links, tibble::as_tibble)
 
@@ -38,7 +39,7 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
       game = x$game,
       level = purrr::pluck(x, "level", .default = NA),
       category = x$category,
-      #videos = pluck(x, "videos", 1, "uri", .default = ""),
+      # videos = pluck(x, "videos", 1, "uri", .default = ""),
       status = x$status$status,
       comment = ifelse(is.null(x$comment), NA, x$comment),
       player_id = purrr::pluck(x, "players", 1, "id", .default = NA),
@@ -54,8 +55,8 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
   })
 
   # Pagination is hard and this doesn't work properly yet
-   # cat("\nnrow(runs) = ", nrow(runs))
-   # cat("\nmax = ", max)
+  # cat("\nnrow(runs) = ", nrow(runs))
+  # cat("\nmax = ", max)
   if (!is.na(next_url) & nrow(runs) < max & nrow(runs) != 0) {
     offset <- purrr::pluck(httr::parse_url(next_url), "query", "offset", .default = "")
     max <- max - as.numeric(offset)
@@ -66,5 +67,4 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
   } else {
     runs
   }
-
 }

@@ -12,15 +12,16 @@
 #' sr_get(path = "users")
 #' }
 sr_get <- function(path = "", ...) {
-
   if (grepl(getOption("speedruncom_base"), path)) {
     url <- path
   } else {
     url <- paste0(getOption("speedruncom_base"), path)
   }
 
-  url <- httr::modify_url(url = url,
-                          query = list(...))
+  url <- httr::modify_url(
+    url = url,
+    query = list(...)
+  )
 
 
   res <- httr::GET(url)

@@ -13,15 +13,16 @@
 #' get_games("Ocarina of Time")
 #' }
 get_games <- function(name = "sm64", abbreviation = NULL, ...) {
-
   if (!is.null(abbreviation)) {
     name <- ""
   } else {
     abbreviation <- ""
   }
 
-  url <- httr::modify_url(url = paste0(getOption("speedruncom_base"), "games"),
-                          query = list(name = name, abbreviation = abbreviation, ...))
+  url <- httr::modify_url(
+    url = paste0(getOption("speedruncom_base"), "games"),
+    query = list(name = name, abbreviation = abbreviation, ...)
+  )
   res <- httr::GET(url)
   httr::warn_for_status(res)
   res <- httr::content(res)
@@ -60,9 +61,10 @@ get_games <- function(name = "sm64", abbreviation = NULL, ...) {
 #' get_categories(id = "j1l9qz1g")
 #' }
 get_categories <- function(id = "j1l9qz1g", ...) {
-
-  url <- httr::modify_url(url = paste0(getOption("speedruncom_base"), "games/", id, "/categories"),
-                          query = list(...))
+  url <- httr::modify_url(
+    url = paste0(getOption("speedruncom_base"), "games/", id, "/categories"),
+    query = list(...)
+  )
   res <- httr::GET(url)
   httr::warn_for_status(res)
   res <- httr::content(res)

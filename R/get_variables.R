@@ -16,10 +16,9 @@
 #' get_variables(id = "e8m7em86")
 #' }
 get_variables <- function(id, list_column = FALSE, ...) {
-
   path <- paste("variables", id, sep = "/")
-  res  <- sr_get(path = path)
-  x    <- res$data
+  res <- sr_get(path = path)
+  x <- res$data
 
   variables <- tibble::tibble(
     id = x$id,
@@ -46,8 +45,10 @@ get_variables <- function(id, list_column = FALSE, ...) {
   values_df$value <- names(values$values)
   values_df$default <- ifelse(values_df$value == values$default, TRUE, FALSE)
 
-  values_df <- values_df[c(which(names(values_df) != "rules"),
-                           which(names(values_df) == "rules"))]
+  values_df <- values_df[c(
+    which(names(values_df) != "rules"),
+    which(names(values_df) == "rules")
+  )]
 
   # List column?
   if (list_column) {

@@ -13,7 +13,6 @@
 #' runs <- find_records(runs)
 #' }
 find_records <- function(runs, by = "date") {
-
   if (!(by %in% c("date", "submitted"))) {
     stop("\"by\" must be either \"date\" (date of run) or \"submitted\" (date of submission)")
   }
@@ -49,5 +48,4 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
   } else if (direction == "both") {
     x <= lower & x >= upper
   }
-
 }
