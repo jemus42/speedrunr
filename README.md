@@ -78,13 +78,12 @@ So apparently we’re looking for `q255jw2o`, the full-game 100% category.
 ### Get the runs in that category
 
 Now we can fetch the runs. By default, 100 runs are returned, ordered by
-submit date in descending order, so newest runs first.
+submit date in descending order, so newest runs first. This also means
+you will only be able to fully assess the WR progression if you make
+sure to get *all* the runs.
 
 ``` r
 runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
-#> 
-#> nrow(runs) =  100
-#> max =  100
 ```
 
 And now we can basically re-create the leaderboard, but including

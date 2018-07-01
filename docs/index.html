@@ -291,11 +291,8 @@ Let’s get started:</p>
 <div id="get-the-runs-in-that-category" class="section level3">
 <h3 class="hasAnchor">
 <a href="#get-the-runs-in-that-category" class="anchor"></a>Get the runs in that category</h3>
-<p>Now we can fetch the runs. By default, 100 runs are returned, ordered by submit date in descending order, so newest runs first.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">runs &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; nrow(runs) =  100</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt; max =  100</span></a></code></pre></div>
+<p>Now we can fetch the runs. By default, 100 runs are returned, ordered by submit date in descending order, so newest runs first. This also means you will only be able to fully assess the WR progression if you make sure to get <em>all</em> the runs.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">runs &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>)</a></code></pre></div>
 <p>And now we can basically re-create the leaderboard, but including obsoleted runs:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(hms)</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"></a>
