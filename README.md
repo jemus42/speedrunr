@@ -82,6 +82,9 @@ submit date in descending order, so newest runs first.
 
 ``` r
 runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
+#> 
+#> nrow(runs) =  100
+#> max =  100
 ```
 
 And now we can basically re-create the leaderboard, but including
@@ -111,18 +114,56 @@ runs %>%
 | 2018-06-16 04:07:34 | 04:15:50      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2017-10-30 04:09:49 | 04:17:44      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2017-12-14 22:50:33 | 04:18:08      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
+| 2018-06-28 17:21:46 | 04:19:35      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
 | 2017-10-29 03:57:41 | 04:19:56      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2018-05-15 15:32:49 | 04:20:17      | <https://www.speedrun.com/api/v1/users/qj2w3p6j> |
+| 2018-06-27 05:15:22 | 04:20:31      | <https://www.speedrun.com/api/v1/users/qjn35kwx> |
 | 2018-05-27 10:47:40 | 04:21:22      | <https://www.speedrun.com/api/v1/users/1xym2kmx> |
 | 2017-11-28 22:51:51 | 04:21:49      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
 | 2017-11-20 04:05:45 | 04:21:54      | <https://www.speedrun.com/api/v1/users/18vv3y8l> |
 | 2018-06-17 05:46:06 | 04:22:28      | <https://www.speedrun.com/api/v1/users/qjn35kwx> |
 | 2018-04-22 01:47:30 | 04:22:36      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
-| 2017-11-18 22:29:46 | 04:23:27      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
-| 2018-04-24 23:27:58 | 04:23:40      | <https://www.speedrun.com/api/v1/users/qj2w3p6j> |
 
-Resolving user id’s to usernames and e.g. platform id to platform name
-is to be implented.
+### More data
+
+Wanna resolve those platforms? Just join with this table:
+
+``` r
+get_platforms() %>%
+  head() %>%
+  kable()
+```
+
+| id       | name        | released |
+| :------- | :---------- | -------: |
+| gx387njo | MS-DOS      |     1970 |
+| 8zjwp7vo | PC          |     1970 |
+| 1wjreqv5 | Plug & Play |     1970 |
+| 6kv975jd | Tabletop    |     1970 |
+| ow319ej9 | Apple II    |     1977 |
+| 54jx7e3d | Atari 2600  |     1977 |
+
+Same can be done with regions:
+
+``` r
+get_regions() %>%
+  kable()
+```
+
+| id       | name       |
+| :------- | :--------- |
+| ypl25l47 | BRA / PAL  |
+| mol4z19n | CHN / iQue |
+| e6lxy1dz | EUR / PAL  |
+| o316x197 | JPN / NTSC |
+| p2g50lnk | KOR / NTSC |
+| pr184lqn | USA / NTSC |
+
+Anf for users, there’s `get_user`.  
+I’ll probably add the option to embed user information in `get_runs` to
+make that a little easiert, because currently you either have to do a
+lot of api calls or do a cumbersome setup to get your usernames in a
+`runs` dataset.
 
 ## Code of Conduct
 

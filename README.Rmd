@@ -82,8 +82,25 @@ runs %>%
   kable()
 ```
 
-Resolving user id's to usernames and e.g. platform id to platform name is to be implented.
+### More data
 
+Wanna resolve those platforms? Just join with this table:
+
+```{r}
+get_platforms() %>%
+  head() %>%
+  kable()
+```
+
+Same can be done with regions:
+
+```{r}
+get_regions() %>%
+  kable()
+```
+
+Anf for users, there's `get_user`.  
+I'll probably add the option to embed user information in `get_runs` to make that a little easiert, because currently you either have to do a lot of api calls or do a cumbersome setup to get your usernames in a `runs` dataset.
 
 ## Code of Conduct
 
