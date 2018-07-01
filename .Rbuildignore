@@ -4,3 +4,5 @@
 ^experiments\.R$
 ^CODE_OF_CONDUCT\.md$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$

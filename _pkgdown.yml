@@ -1,0 +1,14 @@
+reference:
+  - title: The big one
+    contents:
+      - get_runs
+  - title: Getting additional data
+    contents:
+      - starts_with("get_")
+  - title: Helpers
+    contents:
+      - is_outlier
+      - find_records
+  - title: Arbitrary API interaction
+    contents:
+      - sr_get
