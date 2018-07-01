@@ -23,8 +23,8 @@ get_games <- function(name = "", abbreviation = NULL, ...) {
     abbreviation <- ""
   }
 
-  path <- paste0(c("games", id, "categories"), collapse = "/")
-  res <- sr_get(path, name = name, abbreviation = abbreviation,...)
+  path <- paste0(c("games"), collapse = "/")
+  res <- sr_get(path, name = name, abbreviation = abbreviation, ...)
   data <- res$data
 
   extract_gamedata <- function(x) {
@@ -60,7 +60,6 @@ get_games <- function(name = "", abbreviation = NULL, ...) {
 #' get_categories(id = "j1l9qz1g")
 #' }
 get_categories <- function(id, ...) {
-
   path <- paste0(c("games", id, "categories"), collapse = "/")
   res <- sr_get(path, ...)
   data <- res$data
@@ -94,11 +93,9 @@ get_categories <- function(id, ...) {
 #' get_variables_game(game = "j1l9qz1g")
 #' }
 get_variables_game <- function(game, list_column = FALSE) {
-
   path <- paste0(c("games", game, "variables"), collapse = "/")
   res <- sr_get(path)
   data <- res$data
 
   purrr::map_df(data, ~extract_variables(.x, list_column = list_column))
-
 }
