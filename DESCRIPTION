@@ -5,7 +5,9 @@ Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut
 Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
     the ids of games and categories which are required to access run data.
 License: MIT + file LICENSE
-Imports: 
+Depends: R (>= 3.1)
+Imports:
+    dplyr,
     hms,
     httr,
     lubridate,
