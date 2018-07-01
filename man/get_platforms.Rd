@@ -22,6 +22,8 @@ Get Platforms
 }
 \note{
 Currently the \code{released} variables is dropped on \code{list} output because I am bad at lists.
+}
+\examples{
 \dontrun{
 get_platforms()
 }

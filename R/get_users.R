@@ -19,12 +19,12 @@ get_user <- function(id, ...) {
 
   tibble::tibble(
     id = data$id,
-    name_int = data$names$international,
+    name_int = purrr::pluck(data, "names", "international", .default = NA),
     weblink = data$weblink,
     role = data$role,
     signup = lubridate::ymd_hms(data$signup),
-    location_code = pluck(data, "location", "country", "code", .default = NA),
-    location_name = pluck(data, "location", "country", "names", "international", .default = NA),
+    location_code = purrr::pluck(data, "location", "country", "code", .default = NA),
+    location_name = purrr::pluck(data, "location", "country", "names", "international", .default = NA),
     twitch = purrr::pluck(data, "twitch", "uri", .default = NA),
     hitbox = purrr::pluck(data, "hitbox", "uri", .default = NA),
     youtube = purrr::pluck(data, "youtube", "uri", .default = NA),

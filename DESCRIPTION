@@ -13,7 +13,8 @@ Imports:
     purrr,
     hms,
     lubridate,
-    tibble
+    tibble,
+    stats
 Suggests: 
     testthat
 Roxygen: list(markdown = TRUE)

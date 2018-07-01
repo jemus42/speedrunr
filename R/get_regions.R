@@ -31,9 +31,9 @@ get_regions <- function(id = NULL, output = "df") {
   if (output == "df") {
     df
   } else if (output == "list") {
-    region_lst <- as.list(regions$name)
-    names(region_lst) <- regions$id
-    region_lst
+    lst <- as.list(df$name)
+    names(lst) <- df$id
+    lst
   } else {
     warning("Unknown output option. Have a df then.")
     df

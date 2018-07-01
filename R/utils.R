@@ -35,13 +35,12 @@ find_records <- function(runs, by = "date") {
 #'
 #' @return A `logical` vector of the same length as `x`
 #' @export
-#'
 #' @examples
 #' is_outlier(runif(20))
 is_outlier <- function(x, method = "quantile", direction = "upper") {
-  iqr <- IQR(x, na.rm = TRUE)
-  upper <- median(x, na.rm = TRUE) + 1.5 * iqr
-  lower <- median(x, na.rm = TRUE) - 1.5 * iqr
+  iqr <- stats::IQR(x, na.rm = TRUE)
+  upper <- stats::median(x, na.rm = TRUE) + 1.5 * iqr
+  lower <- stats::median(x, na.rm = TRUE) - 1.5 * iqr
 
   if (direction == "upper") {
     x >= upper

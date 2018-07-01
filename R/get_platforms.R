@@ -5,8 +5,8 @@
 #' @return A [tibble::tibble] with platform info and ids.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/platforms.md>
-#' @examples
 #' @note Currently the `released` variables is dropped on `list` output because I am bad at lists.
+#' @examples
 #' \dontrun{
 #' get_platforms()
 #' }
