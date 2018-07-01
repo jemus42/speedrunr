@@ -13,13 +13,25 @@
 #' @examples
 #' \dontrun{
 #' # Get Super Mario 64 variable for platform
-#' get_variables(id = "e8m7em86")
+#' get_variable(id = "e8m7em86")
 #' }
-get_variables <- function(id, list_column = FALSE, ...) {
-  path <- paste("variables", id, sep = "/")
+get_variable <- function(id, list_column = FALSE, ...) {
+  path <- paste0(c("variables", id), collapse = "/")
   res <- sr_get(path = path)
   x <- res$data
 
+  extract_variables(x)
+}
+
+extract_values <- function(x) {
+  tibble::tibble(
+    label = purrr::pluck(x, "label", .default = NA),
+    flags_misc = purrr::pluck(x, "flags", "miscellaneous", .default = NA),
+    rules = purrr::pluck(x, "rules", .default = NA)
+  )
+}
+
+extract_variables <- function(x, list_column = FALSE) {
   variables <- tibble::tibble(
     id = x$id,
     name = x$name,
@@ -31,20 +43,12 @@ get_variables <- function(id, list_column = FALSE, ...) {
     is_subcategory = x$`is-subcategory`
   )
 
-  values <- x$values
-  # value = map_df(values$choices, tibble::as_tibble)
+  values_df <- purrr::map_df(x$values$values, extract_values)
 
-  values_df <- purrr::map_df(values$values, function(x) {
-    tibble::tibble(
-      label = purrr::pluck(x, "label", .default = NA),
-      flags_misc = purrr::pluck(x, "flags", "miscellaneous", .default = NA),
-      rules = purrr::pluck(x, "rules", .default = NA)
-    )
-  })
+  values_df$value <- names(x$values$values)
+  values_df$default <- ifelse(values_df$value == x$values$default, TRUE, FALSE)
 
-  values_df$value <- names(values$values)
-  values_df$default <- ifelse(values_df$value == values$default, TRUE, FALSE)
-
+  # rules column last
   values_df <- values_df[c(
     which(names(values_df) != "rules"),
     which(names(values_df) == "rules")
@@ -54,7 +58,7 @@ get_variables <- function(id, list_column = FALSE, ...) {
   if (list_column) {
     variables$values <- list(values_df)
   } else {
-    variables <- merge(variables, values_df)
+    variables <- tibble::as_tibble(merge(variables, values_df))
   }
 
   variables

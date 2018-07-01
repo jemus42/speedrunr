@@ -23,7 +23,6 @@ sr_get <- function(path = "", ...) {
     query = list(...)
   )
 
-
   res <- httr::GET(url)
   httr::warn_for_status(res)
   res <- httr::content(res)

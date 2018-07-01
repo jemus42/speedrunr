@@ -7,7 +7,7 @@
 \url{https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-gamesidcategories}
 }
 \usage{
-get_categories(id = "j1l9qz1g", ...)
+get_categories(id, ...)
 }
 \arguments{
 \item{id}{THe game's id as required by the API. See \link{get_games} to retrieve the id.}

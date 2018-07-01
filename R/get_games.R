@@ -10,22 +10,21 @@
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-games>
 #' @examples
 #' \dontrun{
-#' get_games("Ocarina of Time")
+#' # Get all games matching Ocarina of Time
+#' get_games(name = "Ocarina of Time")
+#'
+#' # Or directly if you know its abbreviation is oot:
+#' get_games(abbreviation = "oot")
 #' }
-get_games <- function(name = "sm64", abbreviation = NULL, ...) {
+get_games <- function(name = "", abbreviation = NULL, ...) {
   if (!is.null(abbreviation)) {
     name <- ""
   } else {
     abbreviation <- ""
   }
 
-  url <- httr::modify_url(
-    url = paste0(getOption("speedruncom_base"), "games"),
-    query = list(name = name, abbreviation = abbreviation, ...)
-  )
-  res <- httr::GET(url)
-  httr::warn_for_status(res)
-  res <- httr::content(res)
+  path <- paste0(c("games", id, "categories"), collapse = "/")
+  res <- sr_get(path, name = name, abbreviation = abbreviation,...)
   data <- res$data
 
   extract_gamedata <- function(x) {
@@ -60,14 +59,10 @@ get_games <- function(name = "sm64", abbreviation = NULL, ...) {
 #' \dontrun{
 #' get_categories(id = "j1l9qz1g")
 #' }
-get_categories <- function(id = "j1l9qz1g", ...) {
-  url <- httr::modify_url(
-    url = paste0(getOption("speedruncom_base"), "games/", id, "/categories"),
-    query = list(...)
-  )
-  res <- httr::GET(url)
-  httr::warn_for_status(res)
-  res <- httr::content(res)
+get_categories <- function(id, ...) {
+
+  path <- paste0(c("games", id, "categories"), collapse = "/")
+  res <- sr_get(path, ...)
   data <- res$data
 
   categories <- purrr::map_df(data, function(x) {
@@ -82,4 +77,28 @@ get_categories <- function(id = "j1l9qz1g", ...) {
   })
 
   categories[order(categories$name), ]
+}
+
+#' Get a Game's Variables
+#'
+#' @param game The game's `id`
+#' @param list_column `[FALSE]` Whether to return a list column or a flat `tbl`.
+#'
+#' @return A [tibble::tibble] with one row per `variable` _or_
+#'   per `value` depending on `list_column`
+#' @export
+#' @source <https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-gamesidvariables>
+#' @examples
+#' # Get the variables for Ocarina of Time
+#' \dontrun{
+#' get_variables_game(game = "j1l9qz1g")
+#' }
+get_variables_game <- function(game, list_column = FALSE) {
+
+  path <- paste0(c("games", game, "variables"), collapse = "/")
+  res <- sr_get(path)
+  data <- res$data
+
+  purrr::map_df(data, ~extract_variables(.x, list_column = list_column))
+
 }

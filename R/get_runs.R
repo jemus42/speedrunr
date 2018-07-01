@@ -32,27 +32,7 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
 
   data <- res$data
 
-  runs <- purrr::map_df(data, function(x) {
-    tibble::tibble(
-      id = x$id,
-      weblink = x$weblink,
-      game = x$game,
-      level = purrr::pluck(x, "level", .default = NA),
-      category = x$category,
-      # videos = pluck(x, "videos", 1, "uri", .default = ""),
-      status = x$status$status,
-      comment = ifelse(is.null(x$comment), NA, x$comment),
-      player_id = purrr::pluck(x, "players", 1, "id", .default = NA),
-      player_url = purrr::pluck(x, "players", 1, "uri", .default = NA),
-      date = lubridate::ymd(x$date),
-      submitted = lubridate::ymd_hms(x$submitted),
-      time_primary = x$times$primary_t,
-      time_realtime = x$times$realtime_t,
-      system_platform = purrr::pluck(x, "system", "platform", .default = NA),
-      system_emulated = purrr::pluck(x, "system", "emulated", .default = NA),
-      system_region = purrr::pluck(x, "system", "region", .default = NA)
-    )
-  })
+  runs <- purrr::map_df(data, extract_run)
 
   # Pagination is hard and this doesn't work properly yet
   # cat("\nnrow(runs) = ", nrow(runs))
@@ -67,4 +47,28 @@ get_runs <- function(game, category, max = 100, status = "verified", ...) {
   } else {
     runs
   }
+}
+
+#' @keywords internal
+extract_run <- function(x) {
+  tibble::tibble(
+    id = x$id,
+    weblink = x$weblink,
+    game = x$game,
+    level = purrr::pluck(x, "level", .default = NA),
+    category = x$category,
+    # videos = pluck(x, "videos", 1, "uri", .default = ""),
+    status = purrr::pluck(x, "status", "status", .default = NA),
+    comment = purrr::pluck(x, "comment", .default = NA),
+    player_id = purrr::pluck(x, "players", 1, "id", .default = NA),
+    player_url = purrr::pluck(x, "players", 1, "uri", .default = NA),
+    date = lubridate::ymd(pluck(x, "date", .default = NA)),
+    submitted = lubridate::ymd_hms(pluck(x, "submitted", .default = NA)),
+    time_primary = purrr::pluck(x, "times", "primary_t", .default = NA),
+    time_realtime = purrr::pluck(x, "times", "realtime_t", .default = NA),
+    time_ingame = purrr::pluck(x, "times", "ingame_t", .default = NA),
+    system_platform = purrr::pluck(x, "system", "platform", .default = NA),
+    system_emulated = purrr::pluck(x, "system", "emulated", .default = NA),
+    system_region = purrr::pluck(x, "system", "region", .default = NA)
+  )
 }

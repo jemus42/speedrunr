@@ -7,7 +7,7 @@
 \url{https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-games}
 }
 \usage{
-get_games(name = "sm64", abbreviation = NULL, ...)
+get_games(name = "", abbreviation = NULL, ...)
 }
 \arguments{
 \item{name}{A search query, \code{character}.}
@@ -25,6 +25,10 @@ Search for Games by Name
 }
 \examples{
 \dontrun{
-get_games("Ocarina of Time")
+# Get all games matching Ocarina of Time
+get_games(name = "Ocarina of Time")
+
+# Or directly if you know its abbreviation is oot:
+get_games(abbreviation = "oot")
 }
 }

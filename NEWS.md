@@ -1,5 +1,11 @@
 # speedrunr 0.1.9000
 
+* Added functions:
+    - `get_leaderboards`: Get... a leaderboard.
+    - `get_variables_game`: Get a game's variables/values.
+* API changes:
+    - rename `get_variables` to `get_variable` as it only works on a single variable anyway.
+
 # speedrunr 0.1
 
 * Added a `NEWS.md` file to track changes to the package.

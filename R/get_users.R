@@ -11,7 +11,10 @@
 #' get_user(id = "e8e5v680")
 #' }
 get_user <- function(id, ...) {
-  path <- paste("users", id, sep = "/")
+
+  if (is.na(id)) return(NA)
+
+  path <- paste0(c("users", id), collapse = "/")
 
   res <- sr_get(path, ...)
   data <- res$data
