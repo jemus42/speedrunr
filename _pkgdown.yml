@@ -1,5 +1,6 @@
 reference:
   - title: The big one
+    desc: "Get _all_ runs, suggested to filter by game/category and use the `max` argument."
     contents:
       - get_runs
   - title: Expand the runs data
@@ -16,5 +17,6 @@ reference:
       - is_outlier
       - find_records
   - title: Arbitrary API interaction
+    desc: "This function can be used to make arbitrary API calls, i.e. for NYI endpoints."
     contents:
       - sr_get
