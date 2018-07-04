@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a Variable's Information — get_variable • speedrunr</title>
+<title>NA • speedrunr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,15 +25,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script>
+<link href="pkgdown.css" rel="stylesheet">
+<script src="pkgdown.js"></script>
 
 
 
-<meta property="og:title" content="Get a Variable's Information — get_variable" />
-
-<meta property="og:description" content="Get a Variable's Information" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:title" content="NA" />
 
 
 
@@ -49,7 +46,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container template-title-body">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -60,7 +57,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">speedrunr</a>
+        <a class="navbar-link" href="index.html">speedrunr</a>
         <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.9000</span>
       </span>
     </div>
@@ -68,16 +65,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
+  <a href="index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="reference/index.html">Reference</a>
 </li>
 <li>
-  <a href="../news/index.html">Changelog</a>
+  <a href="news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -98,70 +95,23 @@
       </header>
 
 <div class="row">
-  <div class="col-md-9 contents">
+  <div class="contents col-md-9">
     <div class="page-header">
-    <h1>Get a Variable's Information</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/speedrunr/blob/master/R/get_variables.R'><code>R/get_variables.R</code></a></small>
-    <div class="hidden name"><code>get_variable.Rd</code></div>
+      <h1>NA</h1>
     </div>
 
-    <div class="ref-description">
-    
-    <p>Get a Variable's Information</p>
-    
-    </div>
 
-    <pre class="usage"><span class='fu'>get_variable</span>(<span class='no'>id</span>, <span class='kw'>list_column</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>id</th>
-      <td><p>The variable id.</p></td>
-    </tr>
-    <tr>
-      <th>list_column</th>
-      <td><p>If <code>TRUE</code> (default) a list-column <code>values</code> is created.
-If <code>FALSE</code>, esiting rows will be duplicated and merged with the <code>values</code> object,
-yielding a flat tbl without nesting.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Optional arguments passed to the API.</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+<p>Please briefly describe your problem and what output you expect. If you have a question, please don’t use this form. Instead, ask on <a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a> or <a href="https://community.rstudio.com/" class="uri">https://community.rstudio.com/</a>.</p>
+<p>Please include a minimal reproducible example (AKA a reprex). If you’ve never heard of a <a href="http://reprex.tidyverse.org/">reprex</a> before, start by reading <a href="https://www.tidyverse.org/help/#reprex" class="uri">https://www.tidyverse.org/help/#reprex</a>.</p>
+<hr>
+<p>Brief description of the problem</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># insert reprex here</span></a></code></pre></div>
 
-    <p><a href='https://github.com/speedruncomorg/api/blob/master/version1/variables.md'>https://github.com/speedruncomorg/api/blob/master/version1/variables.md</a></p>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A <a href='http://www.rdocumentation.org/packages/tibble/topics/tibble'>tibble::tibble</a> with the same number of rows as the variable has values if
-<code>list_column</code> is <code>FALSE</code>, otherwise a single-row tbl with a list-column.</p>
-    
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Get Super Mario 64 variable for platform</span>
-<span class='fu'>get_variable</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"e8m7em86"</span>)
-<span class='co'># }</span></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
 
   </div>
+
 </div>
+
 
       <footer>
       <div class="copyright">

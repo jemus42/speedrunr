@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get All Runs Within a Game's Category — get_runs • speedrunr</title>
+<title>Join Platform/Region info to Runs — add_platforms • speedrunr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Get All Runs Within a Game's Category — get_runs" />
+<meta property="og:title" content="Join Platform/Region info to Runs — add_platforms" />
 
-<meta property="og:description" content="Get All Runs Within a Game's Category" />
+<meta property="og:description" content="Join Platform/Region info to Runs" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -100,57 +100,47 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get All Runs Within a Game's Category</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/speedrunr/blob/master/R/get_runs.R'><code>R/get_runs.R</code></a></small>
-    <div class="hidden name"><code>get_runs.Rd</code></div>
+    <h1>Join Platform/Region info to Runs</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/speedrunr/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
+    <div class="hidden name"><code>add_miscdata.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get All Runs Within a Game's Category</p>
+    <p>Join Platform/Region info to Runs</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>get_runs</span>(<span class='no'>game</span>, <span class='no'>category</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='st'>"verified"</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>add_platforms</span>(<span class='no'>runs</span>, <span class='kw'>platforms</span> <span class='kw'>=</span> <span class='kw pkg'>speedrunr</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/speedrunr/topics/platformsregions'>platforms</a></span>)
+
+<span class='fu'>add_regions</span>(<span class='no'>runs</span>, <span class='kw'>regions</span> <span class='kw'>=</span> <span class='kw pkg'>speedrunr</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/speedrunr/topics/platformsregions'>regions</a></span>)
+
+<span class='fu'>add_players</span>(<span class='no'>runs</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>game</th>
-      <td><p>The game's id.</p></td>
+      <th>runs</th>
+      <td><p>A <code>tbl</code> of runs as returned by <code>get_runs</code> or <code>get_leaderboards</code></p></td>
     </tr>
     <tr>
-      <th>category</th>
-      <td><p>The category's id.</p></td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td><p>The number of runs to return, default is <code>100</code>.</p></td>
-    </tr>
-    <tr>
-      <th>status</th>
-      <td><p>Filter by run status, default is <code>"verified"</code>. Leave blank for all runs.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Optional arguments passed to API.</p></td>
+      <th>platforms, regions</th>
+      <td><p>The platform/region data to use. Uses packaged datasets by default.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://github.com/speedruncomorg/api/blob/master/version1/runs.md#get-runs'>https://github.com/speedruncomorg/api/blob/master/version1/runs.md#get-runs</a></p>
-    
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='http://www.rdocumentation.org/packages/tibble/topics/tibble'>tibble::tibble</a> of runs.</p>
+    <p>The input <code>runs</code> tbl with resolved <code>system_</code>* variables.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># Get all Ocarina of Time 100% runs:</span>
-<span class='no'>runs</span> <span class='kw'>&lt;-</span> <span class='fu'>get_runs</span>(<span class='kw'>game</span> <span class='kw'>=</span> <span class='st'>"j1l9qz1g"</span>, <span class='kw'>category</span> <span class='kw'>=</span> <span class='st'>"q255jw2o"</span>)
+<span class='no'>runs</span> <span class='kw'>&lt;-</span> <span class='fu'>get_leaderboards</span>(<span class='kw'>game</span> <span class='kw'>=</span> <span class='st'>"j1l9qz1g"</span>)
+
+<span class='fu'>add_platforms</span>(<span class='no'>runs</span>)
+<span class='fu'>add_regions</span>(<span class='no'>runs</span>)
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -158,8 +148,6 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#source">Source</a></li>
-
       <li><a href="#value">Value</a></li>
       
       <li><a href="#examples">Examples</a></li>

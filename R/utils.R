@@ -102,10 +102,14 @@ add_players <- function(runs) {
   runs %>%
     select(player_id) %>%
     distinct() %>%
-    mutate(player_name = purrr::map_chr(player_id,
-                                 ~purrr::pluck(get_user(id = .x),
-                                               "name_int", .default = NA))) %>%
+    mutate(player_name = purrr::map_chr(
+      player_id,
+      ~purrr::pluck(get_user(id = .x),
+        "name_int",
+        .default = NA
+      )
+    )) %>%
     full_join(runs,
-              by = c("player_id" = "player_id")
+      by = c("player_id" = "player_id")
     )
 }
