@@ -2,6 +2,12 @@ reference:
   - title: The big one
     contents:
       - get_runs
+  - title: Expand the runs data
+    desc: "Take a table of runs and resolve encoded id values to readable values"
+    contents:
+      - starts_with("add")
+      - platforms
+      - regions
   - title: Getting additional data
     contents:
       - starts_with("get_")
