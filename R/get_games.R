@@ -70,8 +70,8 @@ get_categories <- function(id, ...) {
       name = x$name,
       link = x$weblink,
       type = x$type,
-      miscellaneous = x$miscellaneous,
-      rules = x$rules
+      miscellaneous = purrr::pluck(x, "miscellaneous", .default = NA),
+      rules = purrr::pluck(x, "rules", .default = NA)
     )
   })
 
