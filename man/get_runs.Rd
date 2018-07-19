@@ -7,7 +7,8 @@
 \url{https://github.com/speedruncomorg/api/blob/master/version1/runs.md#get-runs}
 }
 \usage{
-get_runs(game, category, max = 100, status = "verified", ...)
+get_runs(game, category, max = 100, status = "verified", offset = NULL,
+  verbose = FALSE, ...)
 }
 \arguments{
 \item{game}{The game's id.}
@@ -17,6 +18,11 @@ get_runs(game, category, max = 100, status = "verified", ...)
 \item{max}{The number of runs to return, default is \code{100}.}
 
 \item{status}{Filter by run status, default is \code{"verified"}. Leave blank for all runs.}
+
+\item{offset}{Offset used for pagination, supply \code{200} to get the \emph{next} 200 runs.}
+
+\item{verbose}{If \code{TRUE}, will display debugging output for pagination handling.
+This option will probably not stick around for long.}
 
 \item{...}{Optional arguments passed to API.}
 }
