@@ -108,11 +108,13 @@ runs %>%
 | 2018-06-05 03:41:59 | 04:08:57      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
 | 2018-06-02 03:35:41 | 04:10:17      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
 | 2017-12-28 02:05:48 | 04:10:43      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
+| 2018-07-03 02:09:52 | 04:11:00      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2017-12-14 04:12:51 | 04:11:08      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
 | 2018-06-23 02:17:28 | 04:12:17      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2018-06-16 04:07:34 | 04:15:50      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2017-10-30 04:09:49 | 04:17:44      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2017-12-14 22:50:33 | 04:18:08      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
+| 2018-07-12 20:26:37 | 04:19:26      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
 | 2018-06-28 17:21:46 | 04:19:35      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
 | 2017-10-29 03:57:41 | 04:19:56      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
 | 2018-05-15 15:32:49 | 04:20:17      | <https://www.speedrun.com/api/v1/users/qj2w3p6j> |
@@ -120,8 +122,6 @@ runs %>%
 | 2018-05-27 10:47:40 | 04:21:22      | <https://www.speedrun.com/api/v1/users/1xym2kmx> |
 | 2017-11-28 22:51:51 | 04:21:49      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
 | 2017-11-20 04:05:45 | 04:21:54      | <https://www.speedrun.com/api/v1/users/18vv3y8l> |
-| 2018-06-17 05:46:06 | 04:22:28      | <https://www.speedrun.com/api/v1/users/qjn35kwx> |
-| 2018-04-22 01:47:30 | 04:22:36      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
 
 ### More data
 
@@ -135,12 +135,12 @@ get_platforms() %>%
 
 | id       | name        | released |
 | :------- | :---------- | -------: |
-| gx387njo | MS-DOS      |     1970 |
-| 8zjwp7vo | PC          |     1970 |
-| 1wjreqv5 | Plug & Play |     1970 |
-| 6kv975jd | Tabletop    |     1970 |
-| ow319ej9 | Apple II    |     1977 |
-| 54jx7e3d | Atari 2600  |     1977 |
+| mr6km09z | MS-DOS      |     1970 |
+| 8gej2n93 | PC          |     1970 |
+| 3167od9q | Plug & Play |     1970 |
+| vm9vkn63 | Tabletop    |     1970 |
+| w89ryw6l | Apple II    |     1977 |
+| o0644863 | Atari 2600  |     1977 |
 
 Same can be done with regions:
 
@@ -158,11 +158,30 @@ get_regions() %>%
 | p2g50lnk | KOR / NTSC |
 | pr184lqn | USA / NTSC |
 
-And for users, there’s `get_user`.  
-I’ll probably add the option to embed user information in `get_runs` to
-make that a little easier, because currently you either have to do a lot
-of api calls or do a cumbersome setup to get your usernames in a `runs`
-dataset.
+There are also convenience functions to pipe your `runs` object into:
+
+  - `add_platforms()`
+  - `add_regions()`
+  - `add_players()`, which only makes on API call per unique player.
+
+All of them work in the following way:
+
+``` r
+runs %>% 
+  add_regions() %>%
+  add_platforms() %>%
+  select(time_primary, system_region, system_platform) %>%
+  sample_n(5) %>%
+  knitr::kable()
+```
+
+| time\_primary | system\_region | system\_platform    |
+| ------------: | :------------- | :------------------ |
+|         19603 | JPN / NTSC     | Nintendo 64         |
+|         16135 | JPN / NTSC     | Nintendo 64         |
+|         17671 | JPN / NTSC     | Nintendo 64         |
+|         15682 | JPN / NTSC     | Wii Virtual Console |
+|         15017 | JPN / NTSC     | Wii Virtual Console |
 
 ## Code of Conduct
 

@@ -1,4 +1,4 @@
-# speedrunr 0.1.9000
+# speedrunr 0.2
 
 * Added datasets: `platforms` and `regions` for easier id resolving.
 * Added functions:
@@ -8,6 +8,10 @@
     - `add_players`: Similiar use, but actually does API calls, but only one per unique `player_id`.
 * API changes:
     - rename `get_variables` to `get_variable` as it only works on a single variable anyway.
+
+* Fixes:
+    - `get_categories` now does not fail anymore if one or more categories has no rules.
+    - `get_runs` should properly handle pagination (i.e. `max` > 200) now.
 
 # speedrunr 0.1
 
