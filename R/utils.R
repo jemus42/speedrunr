@@ -56,7 +56,7 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
 #'
 #' @param runs A `tbl` of runs as returned by `get_runs` or `get_leaderboards`
 #' @param platforms,regions The platform/region data to use. Uses packaged datasets by default.
-#' @return The input `runs` tbl with resolved `system_`* variables.
+#' @return The input `runs` tbl with resolved `system_`* variables and/or `player_name` column.
 #' @export
 #' @import dplyr
 #' @examples
@@ -99,6 +99,12 @@ add_regions <- function(runs, regions = speedrunr::regions) {
 add_players <- function(runs) {
   # For R CMD check's global variable thing
   player_id <- NULL
+
+  if ("player_name" %in% names(runs)) {
+    warning("There's already a 'player_name' column, doing nothing.")
+    return(runs)
+  }
+
   runs %>%
     select(player_id) %>%
     distinct() %>%

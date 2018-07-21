@@ -1,3 +1,8 @@
+# speedrunr 0.2.9000
+
+* Output changes:
+    - `get_runs` now *always* embed `player` data, adding `player_name` and other columns.
+
 # speedrunr 0.2
 
 * Added datasets: `platforms` and `regions` for easier id resolving.

@@ -1,6 +1,6 @@
 Package: speedrunr
 Title: Access Data From 'speedrun.com'
-Version: 0.2.0
+Version: 0.2.9000
 Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
 Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
     the ids of games and categories which are required to access run data.

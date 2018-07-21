@@ -18,7 +18,7 @@ add_players(runs)
 \item{platforms, regions}{The platform/region data to use. Uses packaged datasets by default.}
 }
 \value{
-The input \code{runs} tbl with resolved \code{system_}* variables.
+The input \code{runs} tbl with resolved \code{system_}* variables and/or \code{player_name} column.
 }
 \description{
 Join Platform/Region info to Runs
