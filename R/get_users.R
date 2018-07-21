@@ -17,6 +17,11 @@ get_user <- function(id, ...) {
   res <- sr_get(path, ...)
   data <- res$data
 
+  extract_user(data)
+}
+
+#' @keywords internal
+extract_user <- function(data) {
   tibble::tibble(
     id = data$id,
     name_int = purrr::pluck(data, "names", "international", .default = NA),

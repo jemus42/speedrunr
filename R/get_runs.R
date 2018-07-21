@@ -17,10 +17,11 @@
 #' # Get all Ocarina of Time 100% runs:
 #' runs <- get_runs(game = "j1l9qz1g", category = "q255jw2o")
 #' }
-get_runs <- function(game, category, max = 100, status = "verified", offset = NULL, verbose = FALSE, ...) {
+get_runs <- function(game, category, max = 100, status = "verified",
+                     offset = NULL, verbose = FALSE, ...) {
   res <- sr_get("runs",
     game = game, category = category, max = max,
-    status = status, offset = offset,
+    status = status, offset = offset, embed = list(embed = "players"),
     orderby = "submitted", direction = "desc", ...
   )
 
@@ -68,11 +69,14 @@ extract_run <- function(x) {
     game = x$game,
     level = purrr::pluck(x, "level", .default = NA),
     category = x$category,
-    # videos = pluck(x, "videos", 1, "uri", .default = ""),
+    videos = purrr::pluck(x, "videos", "links", 1, "uri", .default = NA),
     status = purrr::pluck(x, "status", "status", .default = NA),
     comment = purrr::pluck(x, "comment", .default = NA),
-    player_id = purrr::pluck(x, "players", 1, "id", .default = NA),
-    player_url = purrr::pluck(x, "players", 1, "uri", .default = NA),
+    player_id = purrr::pluck(x, "players", "data", 1, "id", .default = NA),
+    player_url = purrr::pluck(x, "players", "data", 1, "weblink", .default = NA),
+    player_name = purrr::pluck(x, "players", "data", 1, "names", "international", .default = NA),
+    player_role = purrr::pluck(x, "players", "data", 1, "role", .default = NA),
+    player_signup = lubridate::ymd_hms(purrr::pluck(x, "players", "data", 1, "signup", .default = NA)),
     date = lubridate::ymd(purrr::pluck(x, "date", .default = NA)),
     submitted = lubridate::ymd_hms(purrr::pluck(x, "submitted", .default = NA)),
     time_primary = purrr::pluck(x, "times", "primary_t", .default = NA),
