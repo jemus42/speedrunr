@@ -8,3 +8,5 @@
 ^docs$
 ^data-raw$
 ^\.github$
+^\.travis\.yml$
+^codecov\.yml$
