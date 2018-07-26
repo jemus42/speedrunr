@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 experiments.R
+inst/doc
