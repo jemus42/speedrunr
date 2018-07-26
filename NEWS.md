@@ -1,7 +1,9 @@
 # speedrunr 0.2.9000
 
+* Organizational:
+    - Add travis
 * Output changes:
-    - `get_runs` now *always* embed `player` data, adding `player_name` and other columns.
+    - `get_runs` now *always* embeds `player` data, adding `player_name` and related columns.
 
 # speedrunr 0.2
 

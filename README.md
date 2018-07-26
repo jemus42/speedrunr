@@ -3,6 +3,11 @@
 
 # speedrunr
 
+[![Travis build
+status](https://travis-ci.org/jemus42/speedrunr.svg?branch=master)](https://travis-ci.org/jemus42/speedrunr)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/speedrunr)](https://cran.r-project.org/package=speedrunr)
+
 The goal of speedrunr is to easily access data from
 [speedrun.com](https://speedrun.com).
 
@@ -100,28 +105,28 @@ runs %>%
   kable()
 ```
 
-| submitted           | time\_primary | player\_url                                      |
-| :------------------ | :------------ | :----------------------------------------------- |
-| 2018-06-21 02:28:51 | 04:05:28      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-06-19 05:20:57 | 04:07:59      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-06-14 04:01:53 | 04:08:11      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-06-05 03:41:59 | 04:08:57      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-06-02 03:35:41 | 04:10:17      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2017-12-28 02:05:48 | 04:10:43      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-07-03 02:09:52 | 04:11:00      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
-| 2017-12-14 04:12:51 | 04:11:08      | <https://www.speedrun.com/api/v1/users/e8e5v680> |
-| 2018-06-23 02:17:28 | 04:12:17      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
-| 2018-06-16 04:07:34 | 04:15:50      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
-| 2017-10-30 04:09:49 | 04:17:44      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
-| 2017-12-14 22:50:33 | 04:18:08      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
-| 2018-07-12 20:26:37 | 04:19:26      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
-| 2018-06-28 17:21:46 | 04:19:35      | <https://www.speedrun.com/api/v1/users/qj2okpxk> |
-| 2017-10-29 03:57:41 | 04:19:56      | <https://www.speedrun.com/api/v1/users/v819rrxp> |
-| 2018-05-15 15:32:49 | 04:20:17      | <https://www.speedrun.com/api/v1/users/qj2w3p6j> |
-| 2018-06-27 05:15:22 | 04:20:31      | <https://www.speedrun.com/api/v1/users/qjn35kwx> |
-| 2018-05-27 10:47:40 | 04:21:22      | <https://www.speedrun.com/api/v1/users/1xym2kmx> |
-| 2017-11-28 22:51:51 | 04:21:49      | <https://www.speedrun.com/api/v1/users/v814mkp8> |
-| 2017-11-20 04:05:45 | 04:21:54      | <https://www.speedrun.com/api/v1/users/18vv3y8l> |
+| submitted           | time\_primary | player\_url                                 |
+| :------------------ | :------------ | :------------------------------------------ |
+| 2018-07-22 03:15:39 | 04:03:24      | <https://www.speedrun.com/user/zfg>         |
+| 2018-06-21 02:28:51 | 04:05:28      | <https://www.speedrun.com/user/zfg>         |
+| 2018-07-25 04:07:52 | 04:07:23      | <https://www.speedrun.com/user/Marco>       |
+| 2018-06-19 05:20:57 | 04:07:59      | <https://www.speedrun.com/user/zfg>         |
+| 2018-06-14 04:01:53 | 04:08:11      | <https://www.speedrun.com/user/zfg>         |
+| 2018-06-05 03:41:59 | 04:08:57      | <https://www.speedrun.com/user/zfg>         |
+| 2018-06-02 03:35:41 | 04:10:17      | <https://www.speedrun.com/user/zfg>         |
+| 2018-07-20 01:17:13 | 04:10:32      | <https://www.speedrun.com/user/Marco>       |
+| 2017-12-28 02:05:48 | 04:10:43      | <https://www.speedrun.com/user/zfg>         |
+| 2018-07-03 02:09:52 | 04:11:00      | <https://www.speedrun.com/user/Marco>       |
+| 2017-12-14 04:12:51 | 04:11:08      | <https://www.speedrun.com/user/zfg>         |
+| 2018-07-23 02:36:34 | 04:11:30      | <https://www.speedrun.com/user/Bonooru>     |
+| 2018-06-23 02:17:28 | 04:12:17      | <https://www.speedrun.com/user/Marco>       |
+| 2018-07-19 23:30:26 | 04:15:17      | <https://www.speedrun.com/user/Bonooru>     |
+| 2018-06-16 04:07:34 | 04:15:50      | <https://www.speedrun.com/user/Marco>       |
+| 2018-07-23 01:22:52 | 04:17:27      | <https://www.speedrun.com/user/dannyb21892> |
+| 2017-10-30 04:09:49 | 04:17:44      | <https://www.speedrun.com/user/Marco>       |
+| 2017-12-14 22:50:33 | 04:18:08      | <https://www.speedrun.com/user/cheese05>    |
+| 2018-07-12 20:26:37 | 04:19:26      | <https://www.speedrun.com/user/Bonooru>     |
+| 2018-06-28 17:21:46 | 04:19:35      | <https://www.speedrun.com/user/Bonooru>     |
 
 ### More data
 
@@ -152,7 +157,7 @@ get_regions() %>%
 | id       | name       |
 | :------- | :--------- |
 | ypl25l47 | BRA / PAL  |
-| mol4z19n | CHN / iQue |
+| mol4z19n | CHN / PAL  |
 | e6lxy1dz | EUR / PAL  |
 | o316x197 | JPN / NTSC |
 | p2g50lnk | KOR / NTSC |
@@ -177,11 +182,11 @@ runs %>%
 
 | time\_primary | system\_region | system\_platform    |
 | ------------: | :------------- | :------------------ |
-|         19603 | JPN / NTSC     | Nintendo 64         |
-|         16135 | JPN / NTSC     | Nintendo 64         |
-|         17671 | JPN / NTSC     | Nintendo 64         |
-|         15682 | JPN / NTSC     | Wii Virtual Console |
-|         15017 | JPN / NTSC     | Wii Virtual Console |
+|         21146 | JPN / NTSC     | Nintendo 64         |
+|         14891 | JPN / NTSC     | Wii Virtual Console |
+|         17904 | NA             | Nintendo 64         |
+|         16215 | JPN / NTSC     | Nintendo 64         |
+|         14843 | JPN / NTSC     | Wii Virtual Console |
 
 ## Code of Conduct
 
