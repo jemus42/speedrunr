@@ -10,3 +10,4 @@
 ^\.github$
 ^\.travis\.yml$
 ^codecov\.yml$
+^build\.R$
