@@ -82,7 +82,7 @@
       <h1>Ocarina of Time 100%</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2018-07-26</h4>
+            <h4 class="date">2018-07-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/speedrunr/blob/master/vignettes/ocarina-of-time-100-.Rmd"><code>vignettes/ocarina-of-time-100-.Rmd</code></a></small>
       <div class="hidden name"><code>ocarina-of-time-100-.Rmd</code></div>
@@ -134,26 +134,26 @@
 <a class="sourceLine" id="cb3-4" data-line-number="4">oot100 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>, <span class="dt">max =</span> <span class="ot">Inf</span>)</a></code></pre></div>
 <p>Note that I’m useing <code>max = Inf</code> to make sure I get <em>all</em> the runs.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">str</span>(oot100)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    497 obs. of  22 variables:</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "z51jrdnm" "z03591ez" "yvj63ney" "m3o5d3gm" ...</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/z51jrdnm" "https://www.speedrun.com/oot/run/z03591ez" "https://www.speedrun.com/oot/run/yvj63ney" "https://www.speedrun.com/oot/run/m3o5d3gm" ...</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    498 obs. of  22 variables:</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "mr8k6k2y" "z51jrdnm" "z03591ez" "yvj63ney" ...</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/mr8k6k2y" "https://www.speedrun.com/oot/run/z51jrdnm" "https://www.speedrun.com/oot/run/z03591ez" "https://www.speedrun.com/oot/run/yvj63ney" ...</span></a>
 <a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt;  $ game           : chr  "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" ...</span></a>
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  $ level          : logi  NA NA NA NA NA NA ...</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  $ category       : chr  "q255jw2o" "q255jw2o" "q255jw2o" "q255jw2o" ...</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://youtu.be/wYs40xjSptY" "https://www.youtube.com/watch?v=BnUVK1fpxWo" "https://www.twitch.tv/videos/288576241" "https://www.youtube.com/watch?v=q2tCVdtBxLg" ...</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://youtu.be/maLzD-Ikxoc" "https://youtu.be/wYs40xjSptY" "https://www.youtube.com/watch?v=BnUVK1fpxWo" "https://www.twitch.tv/videos/288576241" ...</span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  $ status         : chr  "verified" "verified" "verified" "verified" ...</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  "Really bad, will sub 4:15 soon!" NA "long overdue" "9th try Dampe" ...</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "1xym2kmx" "v819rrxp" "pj05w98w" "qj2okpxk" ...</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/MasterMonk1991" "https://www.speedrun.com/user/Marco" "https://www.speedrun.com/user/DJCarmichael" "https://www.speedrun.com/user/Bonooru" ...</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "MasterMonk1991" "Marco" "DJCarmichael" "Bonooru" ...</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  "7th dampe" "Really bad, will sub 4:15 soon!" NA "long overdue" ...</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "zxz9r448" "1xym2kmx" "v819rrxp" "pj05w98w" ...</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/Fig02" "https://www.speedrun.com/user/MasterMonk1991" "https://www.speedrun.com/user/Marco" "https://www.speedrun.com/user/DJCarmichael" ...</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "Fig02" "MasterMonk1991" "Marco" "DJCarmichael" ...</span></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  $ player_role    : chr  "user" "user" "user" "user" ...</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2017-01-08 21:04:08" "2015-02-17 18:25:39" ...</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2018-07-26" "2018-07-25" ...</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-07-26 11:09:32" "2018-07-25 04:07:52" ...</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  15586 14843 20589 15090 15447 14604 15032 15317 24385 15566 ...</span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  15586 14843 20589 15090 15447 14604 15032 15317 24385 15566 ...</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2016-02-04 09:35:14" "2017-01-08 21:04:08" ...</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2018-07-26" "2018-07-26" ...</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-07-27 09:07:17" "2018-07-26 11:09:32" ...</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  15689 15586 14843 20589 15090 15447 14604 15032 15317 24385 ...</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  15689 15586 14843 20589 15090 15447 14604 15032 15317 24385 ...</span></a>
 <a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;  $ time_ingame    : int  0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  04:19:46 04:07:23 05:43:09 04:11:30 ...</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  04:21:29 04:19:46 04:07:23 05:43:09 ...</span></a>
 <a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt;   ..- attr(*, "units")= chr "secs"</span></a>
 <a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "nzelreqp" "nzelreqp" "nzelreqp" ...</span></a>
 <a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt;  $ system_emulated: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span></a>
@@ -283,7 +283,7 @@
 <a class="sourceLine" id="cb6-23" data-line-number="23"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/hrbrthemes/topics/theme_ipsum">theme_ipsum</a></span>() <span class="op">+</span></a>
 <a class="sourceLine" id="cb6-24" data-line-number="24"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/theme">theme</a></span>(<span class="dt">legend.position =</span> <span class="st">"top"</span>)</a>
 <a class="sourceLine" id="cb6-25" data-line-number="25">  }</a></code></pre></div>
-<p><img src="ocarina-of-time-100-_files/figure-html/unnamed-chunk-6-1.png" width="768"></p>
+<p><img src="ocarina-of-time-100-_files/figure-html/oot_100_overview-1.png" width="768"></p>
 <p>Please note that the data on speedrun.com does <em>not</em> cover the whole history. There are lots of older runs missing here, and unless the mods come together und do some historic backlogging, that’s as good as it gets for now.</p>
 <p>We can also take a look at the recent developments:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(lubridate)</a>
@@ -298,7 +298,7 @@
 <a class="sourceLine" id="cb7-10" data-line-number="10"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggrepel/topics/geom_text_repel">geom_label_repel</a></span>(<span class="dt">data =</span> .</a>
 <a class="sourceLine" id="cb7-11" data-line-number="11">                       <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(player_name) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">                         </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span>(<span class="dt">y =</span> <span class="kw">min</span>(time_hms), <span class="dt">x =</span> <span class="kw">max</span>(date)),</a>
-<a class="sourceLine" id="cb7-13" data-line-number="13">                       <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">label =</span> player_name, <span class="dt">x =</span> x, <span class="dt">y =</span> y),</a>
+<a class="sourceLine" id="cb7-13" data-line-number="13">                       <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">label =</span> <span class="kw">paste0</span>(player_name, <span class="st">": "</span>, y), <span class="dt">x =</span> x, <span class="dt">y =</span> y),</a>
 <a class="sourceLine" id="cb7-14" data-line-number="14">                       <span class="dt">color =</span> <span class="st">"black"</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>, <span class="dt">show.legend =</span> F) <span class="op">+</span></a>
 <a class="sourceLine" id="cb7-15" data-line-number="15"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/scale_date">scale_x_date</a></span>(<span class="dt">date_breaks =</span> <span class="st">"1 month"</span>, <span class="dt">date_labels =</span> <span class="st">"%b '%y"</span>,</a>
 <a class="sourceLine" id="cb7-16" data-line-number="16">                   <span class="dt">limits =</span> <span class="kw">c</span>(<span class="kw">as.Date</span>(<span class="ot">NA</span>), <span class="kw"><a href="http://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span>(<span class="st">"2018-08-21"</span>))) <span class="op">+</span></a>
@@ -311,7 +311,7 @@
 <a class="sourceLine" id="cb7-23" data-line-number="23">           <span class="dt">x =</span> <span class="st">"Date of Run"</span>, <span class="dt">y =</span> <span class="st">"Time"</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb7-24" data-line-number="24"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/hrbrthemes/topics/theme_ipsum">theme_ipsum</a></span>(<span class="dt">grid =</span> <span class="st">"x"</span>)</a>
 <a class="sourceLine" id="cb7-25" data-line-number="25">  }</a></code></pre></div>
-<p><img src="ocarina-of-time-100-_files/figure-html/unnamed-chunk-7-1.png" width="768"></p>
+<p><img src="ocarina-of-time-100-_files/figure-html/oot_100_recents-1.png" width="768"></p>
 </div>
   </div>
 
