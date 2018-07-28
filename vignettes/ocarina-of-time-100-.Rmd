@@ -73,7 +73,7 @@ oot100 %>%
 
 Now we can take a look at the categories (recent) history, with highlighted records:
 
-```{r}
+```{r oot_100_overview}
 library(ggplot2)
 library(ggrepel)
 library(hrbrthemes)
@@ -105,7 +105,7 @@ Please note that the data on speedrun.com does *not* cover the whole history. Th
 
 We can also take a look at the recent developments:
 
-```{r}
+```{r oot_100_recents}
 library(lubridate)
 
 oot100 %>%
@@ -118,7 +118,7 @@ oot100 %>%
       geom_label_repel(data = .
                        %>% group_by(player_name) %>%
                          summarize(y = min(time_hms), x = max(date)),
-                       aes(label = player_name, x = x, y = y),
+                       aes(label = paste0(player_name, ": ", y), x = x, y = y),
                        color = "black", alpha = .75, show.legend = F) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
                    limits = c(as.Date(NA), ymd("2018-08-21"))) +
