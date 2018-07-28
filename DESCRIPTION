@@ -18,12 +18,12 @@ Imports:
     stats,
     tibble
 Suggests: 
-    knitr,
-    rmarkdown,
-    testthat,
     ggplot2,
     ggrepel,
-    hrbrthemes
+    hrbrthemes,
+    knitr,
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr
 ByteCompile: true
 Encoding: UTF-8
