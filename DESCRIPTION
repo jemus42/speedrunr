@@ -20,7 +20,10 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    ggplot2,
+    ggrepel,
+    hrbrthemes
 VignetteBuilder: knitr
 ByteCompile: true
 Encoding: UTF-8
