@@ -113,13 +113,13 @@ tmp <- oot100 %>%
          date >= ymd("2018-01-01")) %>%
   select(player_name, time_hms, date)
 
-  bind_rows(
-      tmp,
-      tmp %>%
-        group_by(player_name) %>%
-        summarize(time_hms = min(time_hms), date = today()) %>%
-        ungroup
-  ) %>%
+bind_rows(
+  tmp,
+  tmp %>%
+    group_by(player_name) %>%
+    summarize(time_hms = min(time_hms), date = today()) %>%
+    ungroup
+) %>%
   {
     ggplot(., aes(date, time_hms, color = player_name, fill = player_name)) +
       geom_point(size = 1, alpha = .75) +
@@ -132,14 +132,14 @@ tmp <- oot100 %>%
                        hjust = 1, direction = "y", nudge_x = 60^2) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
                    limits = c(as.Date(NA), today() + days(45))) +
-      scale_y_time(breaks = seq(2 * 60^2, 20 * 60^2,  1/12 * 60^2),
-                   minor_breaks = seq(2 * 60^2, 20 * 60^2, 1/24 * 60)) +
+      scale_y_time(breaks = seq(0, 20 * 60^2,  1/12 * 60^2),
+                   minor_breaks = seq(0, 20 * 60^2, 1/24 * 60)) +
       scale_color_brewer(palette = "Dark2", guide = F) +
       scale_fill_brewer(palette = "Dark2", guide = F) +
       labs(title = "Ocarina of Time: 100% Speedruns in 2018",
-           subtitle = paste0("All data from speedrun.com (n = ", nrow(.), ")"),
+           subtitle = paste0("All data from speedrun.com (n = ", nrow(tmp), ")"),
            x = "Date of Run", y = "Time") +
-      theme_ipsum(grid = "x")
+      theme_ipsum(grid = "X") + theme(axis.text.x = element_text(hjust = 0))
   }
 ```
 
