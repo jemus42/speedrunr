@@ -1,9 +1,9 @@
 Package: speedrunr
-Title: Access Data From 'speedrun.com'
+Title: Access Data from 'speedrun.com'
 Version: 0.2.9000
 Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
-Description: This package provides wrappers for the 'speedrun.com' API to make it easier to identify
-    the ids of games and categories which are required to access run data.
+Description: Wrappers for the 'speedrun.com' API to make it easier to identify
+    the ids of games and categories which are required to access run data in tabular form.
 License: MIT + file LICENSE
 URL: https://github.com/jemus42/speedrunr
 BugReports: https://github.com/jemus42/speedrunr/issues
