@@ -114,7 +114,7 @@ oot100 %>%
   {
     ggplot(., aes(date, time_hms, color = player_name, fill = player_name)) +
       geom_point(size = 1, alpha = .75) +
-      geom_path() +
+      geom_step() +
       geom_label_repel(data = .
                        %>% group_by(player_name) %>%
                          summarize(y = min(time_hms), x = max(date)),
