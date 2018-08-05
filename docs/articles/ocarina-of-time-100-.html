@@ -82,7 +82,7 @@
       <h1>Ocarina of Time 100%</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2018-08-04</h4>
+            <h4 class="date">2018-08-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/speedrunr/blob/master/vignettes/ocarina-of-time-100-.Rmd"><code>vignettes/ocarina-of-time-100-.Rmd</code></a></small>
       <div class="hidden name"><code>ocarina-of-time-100-.Rmd</code></div>
@@ -294,7 +294,7 @@
 <a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">  </span>{</a>
 <a class="sourceLine" id="cb7-7" data-line-number="7">    <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(., <span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(date, time_hms, <span class="dt">color =</span> player_name, <span class="dt">fill =</span> player_name)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb7-8" data-line-number="8"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_path">geom_path</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggplot2/topics/geom_path">geom_step</a></span>() <span class="op">+</span></a>
 <a class="sourceLine" id="cb7-10" data-line-number="10"><span class="st">      </span><span class="kw"><a href="http://www.rdocumentation.org/packages/ggrepel/topics/geom_text_repel">geom_label_repel</a></span>(<span class="dt">data =</span> .</a>
 <a class="sourceLine" id="cb7-11" data-line-number="11">                       <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(player_name) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">                         </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span>(<span class="dt">y =</span> <span class="kw">min</span>(time_hms), <span class="dt">x =</span> <span class="kw">max</span>(date)),</a>
