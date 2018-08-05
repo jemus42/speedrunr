@@ -105,12 +105,21 @@ Please note that the data on speedrun.com does *not* cover the whole history. Th
 
 We can also take a look at the recent developments:
 
-```{r oot_100_recents}
+```{r oot_100_recents, fig.width=12}
 library(lubridate)
 
-oot100 %>%
+tmp <- oot100 %>%
   filter(time_hms < hms::hms(hours = 4, minutes = 30),
          date >= ymd("2018-01-01")) %>%
+  select(player_name, time_hms, date)
+
+  bind_rows(
+      tmp,
+      tmp %>%
+        group_by(player_name) %>%
+        summarize(time_hms = min(time_hms), date = today()) %>%
+        ungroup
+  ) %>%
   {
     ggplot(., aes(date, time_hms, color = player_name, fill = player_name)) +
       geom_point(size = 1, alpha = .75) +
@@ -119,9 +128,10 @@ oot100 %>%
                        %>% group_by(player_name) %>%
                          summarize(y = min(time_hms), x = max(date)),
                        aes(label = paste0(player_name, ": ", y), x = x, y = y),
-                       color = "black", alpha = .75, show.legend = F) +
+                       color = "black", alpha = .75, show.legend = F,
+                       hjust = 1, direction = "y", nudge_x = 60^2) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
-                   limits = c(as.Date(NA), ymd("2018-09-21"))) +
+                   limits = c(as.Date(NA), today() + days(45))) +
       scale_y_time(breaks = seq(2 * 60^2, 20 * 60^2,  1/12 * 60^2),
                    minor_breaks = seq(2 * 60^2, 20 * 60^2, 1/24 * 60)) +
       scale_color_brewer(palette = "Dark2", guide = F) +
