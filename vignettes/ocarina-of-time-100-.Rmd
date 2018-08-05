@@ -137,8 +137,8 @@ bind_rows(
       scale_color_brewer(palette = "Dark2", guide = F) +
       scale_fill_brewer(palette = "Dark2", guide = F) +
       labs(title = "Ocarina of Time: 100% Speedruns in 2018",
-           subtitle = paste0("All data from speedrun.com (n = ", nrow(tmp), ")"),
-           x = "Date of Run", y = "Time") +
+           subtitle = "All data from speedrun.com",
+           x = "Date of Run", y = "Time (H:M:S)") +
       theme_ipsum(grid = "X") + theme(axis.text.x = element_text(hjust = 0))
   }
 ```
