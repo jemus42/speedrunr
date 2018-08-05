@@ -121,7 +121,7 @@ oot100 %>%
                        aes(label = paste0(player_name, ": ", y), x = x, y = y),
                        color = "black", alpha = .75, show.legend = F) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
-                   limits = c(as.Date(NA), ymd("2018-08-21"))) +
+                   limits = c(as.Date(NA), ymd("2018-09-21"))) +
       scale_y_time(breaks = seq(2 * 60^2, 20 * 60^2,  1/12 * 60^2),
                    minor_breaks = seq(2 * 60^2, 20 * 60^2, 1/24 * 60)) +
       scale_color_brewer(palette = "Dark2", guide = F) +
