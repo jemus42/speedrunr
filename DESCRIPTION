@@ -1,8 +1,13 @@
 Package: speedrunr
 Title: Access Data from 'speedrun.com'
 Version: 0.2.9000
-Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
-Description: Wrappers for the 'speedrun.com' API to make it easy to access run data.
+Authors@R: 
+    person(given = "Lukas",
+           family = "Burk",
+           role = c("aut", "cre"),
+           email = "lukas@quantenbrot.de")
+Description: Wrappers for the 'speedrun.com' API to make it easy
+    to access run data.
 License: MIT + file LICENSE
 URL: https://github.com/jemus42/speedrunr
 BugReports: https://github.com/jemus42/speedrunr/issues
@@ -23,7 +28,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
