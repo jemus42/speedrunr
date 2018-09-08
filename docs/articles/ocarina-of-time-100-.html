@@ -82,7 +82,7 @@
       <h1>Ocarina of Time 100%</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2018-08-28</h4>
+            <h4 class="date">2018-09-08</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/speedrunr/blob/master/vignettes/ocarina-of-time-100-.Rmd"><code>vignettes/ocarina-of-time-100-.Rmd</code></a></small>
       <div class="hidden name"><code>ocarina-of-time-100-.Rmd</code></div>
@@ -134,29 +134,29 @@
 <a class="sourceLine" id="cb3-4" data-line-number="4">oot100 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>, <span class="dt">max =</span> <span class="ot">Inf</span>)</a></code></pre></div>
 <p>Note that I’m useing <code>max = Inf</code> to make sure I get <em>all</em> the runs.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">str</span>(oot100)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    523 obs. of  22 variables:</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "zp0317rm" "zn4oo77m" "z0369xjz" "z118jkjz" ...</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/zp0317rm" "https://www.speedrun.com/oot/run/zn4oo77m" "https://www.speedrun.com/oot/run/z0369xjz" "https://www.speedrun.com/oot/run/z118jkjz" ...</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    529 obs. of  22 variables:</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "mr8161dy" "mk9geg1z" "ywpq40nz" "zx4g9e5y" ...</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/mr8161dy" "https://www.speedrun.com/oot/run/mk9geg1z" "https://www.speedrun.com/oot/run/ywpq40nz" "https://www.speedrun.com/oot/run/zx4g9e5y" ...</span></a>
 <a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt;  $ game           : chr  "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" ...</span></a>
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  $ level          : logi  NA NA NA NA NA NA ...</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  $ category       : chr  "q255jw2o" "q255jw2o" "q255jw2o" "q255jw2o" ...</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://youtu.be/UYduGXcjhZ4" "https://www.youtube.com/watch?v=89FA2_ZVpW4" "https://www.youtube.com/watch?v=VqGOGYBs-eA" "https://www.twitch.tv/videos/299897229" ...</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://www.twitch.tv/videos/307404183" "https://www.twitch.tv/videos/307403446" "https://www.twitch.tv/videos/210528062" "https://www.twitch.tv/videos/305356297" ...</span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  $ status         : chr  "verified" "verified" "verified" "verified" ...</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  "4th try Dampe and lost a minute and a half to messing up the Twinrova 1 cycle. 4:07 coming soon!" "2nd try Dampe, but lost over 2 minutes in Spirit Temple. Gonna go for 4:07 before I am done with this category for a while." "4th try Dampe, sub 4:05 is my goal." "2nd try bridge clip" ...</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "1xym2kmx" "1xym2kmx" "qj2okpxk" "qxk3yw98" ...</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/MasterMonk1991" "https://www.speedrun.com/user/MasterMonk1991" "https://www.speedrun.com/user/Bonooru" "https://www.speedrun.com/user/jfm2796" ...</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "MasterMonk1991" "MasterMonk1991" "Bonooru" "jfm2796" ...</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  "Soooo bad Dampe" "Sooooo bad Dampe" "Wrote my own route. Terrible, but fun." "first run, 25th try dampe. split 2.7 seconds early so i added that time to final split." ...</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "68wq9z8g" "68wq9z8g" "v8lvg2jm" "dx3pgkk8" ...</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/Cma" "https://www.speedrun.com/user/Cma" "https://www.speedrun.com/user/adefgames" "https://www.speedrun.com/user/11brendon" ...</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "Cma" "Cma" "adefgames" "11brendon" ...</span></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  $ player_role    : chr  "user" "user" "user" "user" ...</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2017-01-08 21:04:08" "2017-01-08 21:04:08" ...</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2018-08-24" "2018-08-23" ...</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-08-24 10:36:10" "2018-08-23 14:48:18" ...</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  14990 15014 14877 19485 14258 15151 17841 15269 16777 14982 ...</span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  14990 15014 14877 19485 14258 15151 17841 15269 16777 14982 ...</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2015-02-20 17:09:08" "2015-02-20 17:09:08" ...</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2018-09-08" "2018-09-08" ...</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-09-08 10:43:58" "2018-09-08 10:40:08" ...</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  15848 15848 25479 24707 20589 14499 14990 15014 14877 19485 ...</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  15848 15848 25479 24707 20589 14499 14990 15014 14877 19485 ...</span></a>
 <a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;  $ time_ingame    : int  0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  04:09:50 04:10:14 04:07:57 05:24:45 ...</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  04:24:08 04:24:08 07:04:39 06:51:47 ...</span></a>
 <a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt;   ..- attr(*, "units")= chr "secs"</span></a>
 <a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "nzelreqp" "nzelreqp" "nzelreqp" ...</span></a>
-<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt;  $ system_emulated: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt;  $ system_emulated: logi  FALSE FALSE FALSE FALSE TRUE FALSE ...</span></a>
 <a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt;  $ system_region  : chr  "o316x197" "o316x197" "o316x197" "o316x197" ...</span></a></code></pre></div>
 <p>We want some additional data:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
@@ -203,51 +203,51 @@
 <td align="left">JPN / NTSC</td>
 </tr>
 <tr class="even">
+<td align="left">04:01:39</td>
+<td align="left">Marco</td>
+<td align="left">2018-09-01</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="odd">
 <td align="left">04:03:24</td>
 <td align="left">zfg</td>
 <td align="left">2018-07-21</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:03:40</td>
 <td align="left">Marco</td>
 <td align="left">2018-08-04</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">04:05:28</td>
 <td align="left">zfg</td>
 <td align="left">2018-06-20</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:07:23</td>
 <td align="left">Marco</td>
 <td align="left">2018-07-25</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">04:07:57</td>
 <td align="left">Bonooru</td>
 <td align="left">2018-08-23</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:07:59</td>
 <td align="left">zfg</td>
 <td align="left">2018-06-18</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">04:08:11</td>
-<td align="left">zfg</td>
-<td align="left">2018-06-13</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
