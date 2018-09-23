@@ -82,7 +82,7 @@
       <h1>Ocarina of Time 100%</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2018-09-22</h4>
+            <h4 class="date">2018-09-23</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/speedrunr/blob/master/vignettes/ocarina-of-time-100-.Rmd"><code>vignettes/ocarina-of-time-100-.Rmd</code></a></small>
       <div class="hidden name"><code>ocarina-of-time-100-.Rmd</code></div>
@@ -134,28 +134,28 @@ category &lt;-<span class="st"> "q255jw2o"</span>
 oot100 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>, <span class="dt">max =</span> <span class="ot">Inf</span>)</code></pre></div>
 <p>Note that I’m useing <code>max = Inf</code> to make sure I get <em>all</em> the runs.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(oot100)
-<span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    535 obs. of  22 variables:</span>
-<span class="co">#&gt;  $ id             : chr  "zx4gejqy" "y2qx61jy" "z03rkvoz" "yvj17p6y" ...</span>
-<span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/zx4gejqy" "https://www.speedrun.com/oot/run/y2qx61jy" "https://www.speedrun.com/oot/run/z03rkvoz" "https://www.speedrun.com/oot/run/yvj17p6y" ...</span>
+<span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    536 obs. of  22 variables:</span>
+<span class="co">#&gt;  $ id             : chr  "y923l3ez" "zx4gejqy" "y2qx61jy" "z03rkvoz" ...</span>
+<span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/y923l3ez" "https://www.speedrun.com/oot/run/zx4gejqy" "https://www.speedrun.com/oot/run/y2qx61jy" "https://www.speedrun.com/oot/run/z03rkvoz" ...</span>
 <span class="co">#&gt;  $ game           : chr  "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" ...</span>
 <span class="co">#&gt;  $ level          : logi  NA NA NA NA NA NA ...</span>
 <span class="co">#&gt;  $ category       : chr  "q255jw2o" "q255jw2o" "q255jw2o" "q255jw2o" ...</span>
-<span class="co">#&gt;  $ videos         : chr  "https://www.youtube.com/watch?v=l_m6TKaZhQE" "https://www.twitch.tv/videos/310354385" "https://www.twitch.tv/videos/310313258" "https://www.twitch.tv/videos/309881127" ...</span>
+<span class="co">#&gt;  $ videos         : chr  "https://www.youtube.com/watch?v=Fw5i584lHRI" "https://www.youtube.com/watch?v=l_m6TKaZhQE" "https://www.twitch.tv/videos/310354385" "https://www.twitch.tv/videos/310313258" ...</span>
 <span class="co">#&gt;  $ status         : chr  "verified" "verified" "verified" "verified" ...</span>
-<span class="co">#&gt;  $ comment        : chr  NA "I got to the top 100! Its a big milestone for me!\r\n6th try Dampe and my superslides need A LOT of work. But o"| __truncated__ "4th try dampe.\r\nFailed Collapse skip. really bad" "Terrible Run" ...</span>
-<span class="co">#&gt;  $ player_id      : chr  "v819rrxp" "kj9r4qnj" "68wq9z8g" "kj9r4qnj" ...</span>
-<span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/Marco" "https://www.speedrun.com/user/Hsarlo_Christian" "https://www.speedrun.com/user/Cma" "https://www.speedrun.com/user/Hsarlo_Christian" ...</span>
-<span class="co">#&gt;  $ player_name    : chr  "Marco" "Hsarlo_Christian" "Cma" "Hsarlo_Christian" ...</span>
+<span class="co">#&gt;  $ comment        : chr  "1st try dampe.  during the oot vs oot3d 100% race." NA "I got to the top 100! Its a big milestone for me!\r\n6th try Dampe and my superslides need A LOT of work. But o"| __truncated__ "4th try dampe.\r\nFailed Collapse skip. really bad" ...</span>
+<span class="co">#&gt;  $ player_id      : chr  "e8e5v680" "v819rrxp" "kj9r4qnj" "68wq9z8g" ...</span>
+<span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/zfg" "https://www.speedrun.com/user/Marco" "https://www.speedrun.com/user/Hsarlo_Christian" "https://www.speedrun.com/user/cma2819" ...</span>
+<span class="co">#&gt;  $ player_name    : chr  "zfg" "Marco" "Hsarlo_Christian" "cma2819" ...</span>
 <span class="co">#&gt;  $ player_role    : chr  "user" "user" "user" "user" ...</span>
-<span class="co">#&gt;  $ player_signup  : POSIXct, format: "2015-02-17 18:25:39" "2016-10-29 07:59:09" ...</span>
-<span class="co">#&gt;  $ date           : Date, format: "2018-09-17" "2018-09-15" ...</span>
-<span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-09-17 12:49:58" "2018-09-15 10:32:25" ...</span>
-<span class="co">#&gt;  $ time_primary   : int  14447 20884 15577 22987 14824 22265 15848 15848 25479 24707 ...</span>
-<span class="co">#&gt;  $ time_realtime  : int  14447 20884 15577 22987 14824 22265 15848 15848 25479 24707 ...</span>
+<span class="co">#&gt;  $ player_signup  : POSIXct, format: "2015-02-17 03:55:57" "2015-02-17 18:25:39" ...</span>
+<span class="co">#&gt;  $ date           : Date, format: "2018-09-22" "2018-09-17" ...</span>
+<span class="co">#&gt;  $ submitted      : POSIXct, format: "2018-09-23 01:03:54" "2018-09-17 12:49:58" ...</span>
+<span class="co">#&gt;  $ time_primary   : int  14168 14447 20884 15577 22987 14824 22265 15848 15848 25479 ...</span>
+<span class="co">#&gt;  $ time_realtime  : int  14168 14447 20884 15577 22987 14824 22265 15848 15848 25479 ...</span>
 <span class="co">#&gt;  $ time_ingame    : int  0 0 0 0 0 0 0 0 0 0 ...</span>
-<span class="co">#&gt;  $ time_hms       : 'hms' num  04:00:47 05:48:04 04:19:37 06:23:07 ...</span>
+<span class="co">#&gt;  $ time_hms       : 'hms' num  03:56:08 04:00:47 05:48:04 04:19:37 ...</span>
 <span class="co">#&gt;   ..- attr(*, "units")= chr "secs"</span>
-<span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "w89rwelk" "nzelreqp" "w89rwelk" ...</span>
+<span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "nzelreqp" "w89rwelk" "nzelreqp" ...</span>
 <span class="co">#&gt;  $ system_emulated: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span>
 <span class="co">#&gt;  $ system_region  : chr  "o316x197" "o316x197" "o316x197" "o316x197" ...</span></code></pre></div>
 <p>We want some additional data:</p>
@@ -182,72 +182,72 @@ oot100 <span class="op">%&gt;%</span><span class="st"> </span>
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td align="left">03:56:08</td>
+<td align="left">zfg</td>
+<td align="left">2018-09-22</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="even">
 <td align="left">03:57:38</td>
 <td align="left">zfg</td>
 <td align="left">2018-08-20</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">03:58:45</td>
 <td align="left">zfg</td>
 <td align="left">2018-08-01</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:00:47</td>
 <td align="left">Marco</td>
 <td align="left">2018-09-17</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">04:01:05</td>
 <td align="left">zfg</td>
 <td align="left">2018-07-27</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:01:39</td>
 <td align="left">Marco</td>
 <td align="left">2018-09-01</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">04:03:24</td>
 <td align="left">zfg</td>
 <td align="left">2018-07-21</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:03:40</td>
 <td align="left">Marco</td>
 <td align="left">2018-08-04</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">04:05:28</td>
 <td align="left">zfg</td>
 <td align="left">2018-06-20</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">04:07:04</td>
 <td align="left">MasterMonk1991</td>
 <td align="left">2018-09-09</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">04:07:23</td>
-<td align="left">Marco</td>
-<td align="left">2018-07-25</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
