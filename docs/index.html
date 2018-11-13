@@ -93,22 +93,22 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of speedrunr from GitHub with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"jemus42/speedrunr"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"jemus42/speedrunr"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>Let’s say you want to plot the times of all <em>Ocarina of TIme 100%</em> runs.<br>
 Let’s get started:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(knitr)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">library</span>(knitr)</a></code></pre></div>
 <div id="identifiyng-the-game-youre-looking-for" class="section level3">
 <h3 class="hasAnchor">
 <a href="#identifiyng-the-game-youre-looking-for" class="anchor"></a>Identifiyng the game you’re looking for</h3>
 <p>You can either search for “Ocarina of Time”, or supply <code>'oot'</code>, the game’s abbreviation on speedrun.com.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">games &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_games.html">get_games</a></span>(<span class="dt">name =</span> <span class="st">"Ocarina of Time"</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(games)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">games &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_games.html">get_games</a></span>(<span class="dt">name =</span> <span class="st">"Ocarina of Time"</span>)</a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(games)</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">id</th>
@@ -206,11 +206,11 @@ Let’s get started:</p>
 <div id="get-the-games-categories" class="section level3">
 <h3 class="hasAnchor">
 <a href="#get-the-games-categories" class="anchor"></a>Get the game’s categories</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">categories &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_categories.html">get_categories</a></span>(<span class="dt">id =</span> <span class="st">"j1l9qz1g"</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">categories <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="op">-</span>rules) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">categories &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_categories.html">get_categories</a></span>(<span class="dt">id =</span> <span class="st">"j1l9qz1g"</span>)</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3">categories <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="op">-</span>rules) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">id</th>
@@ -312,16 +312,16 @@ Let’s get started:</p>
 <h3 class="hasAnchor">
 <a href="#get-the-runs-in-that-category" class="anchor"></a>Get the runs in that category</h3>
 <p>Now we can fetch the runs. By default, 100 runs are returned, ordered by submit date in descending order, so newest runs first. This also means you will only be able to fully assess the WR progression if you make sure to get <em>all</em> the runs.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">runs &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">runs &lt;-<span class="st"> </span><span class="kw"><a href="reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>)</a></code></pre></div>
 <p>And now we can basically re-create the leaderboard, but including obsoleted runs:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(hms)</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">runs <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span>(time_primary) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="st">  </span><span class="kw">head</span>(<span class="dv">20</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(submitted, time_primary, player_url) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">time_primary =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/hms/topics/hms">hms</a></span>(<span class="dt">seconds =</span> time_primary)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">library</span>(hms)</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3">runs <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span>(time_primary) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="st">  </span><span class="kw">head</span>(<span class="dv">20</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(submitted, time_primary, player_url) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">time_primary =</span> <span class="kw"><a href="http://www.rdocumentation.org/packages/hms/topics/hms">hms</a></span>(<span class="dt">seconds =</span> time_primary)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">submitted</th>
@@ -436,9 +436,9 @@ Let’s get started:</p>
 <h3 class="hasAnchor">
 <a href="#more-data" class="anchor"></a>More data</h3>
 <p>Wanna resolve those platforms? Just join with this table:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="reference/get_platforms.html">get_platforms</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw">head</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw"><a href="reference/get_platforms.html">get_platforms</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="st">  </span><span class="kw">head</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">id</th>
@@ -479,8 +479,8 @@ Let’s get started:</p>
 </tbody>
 </table>
 <p>Same can be done with regions:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="reference/get_regions.html">get_regions</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw"><a href="reference/get_regions.html">get_regions</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="st">  </span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">id</th>
@@ -521,12 +521,12 @@ Let’s get started:</p>
 <code><a href="reference/add_miscdata.html">add_players()</a></code>, which only makes on API call per unique player.</li>
 </ul>
 <p>All of them work in the following way:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">runs <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="reference/add_miscdata.html">add_regions</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="reference/add_miscdata.html">add_platforms</a></span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(time_primary, system_region, system_platform) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/sample.html">sample_n</a></span>(<span class="dv">5</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span>knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">runs <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/add_miscdata.html">add_regions</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="st">  </span><span class="kw"><a href="reference/add_miscdata.html">add_platforms</a></span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(time_primary, system_region, system_platform) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="st">  </span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/sample.html">sample_n</a></span>(<span class="dv">5</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-6" title="6"><span class="st">  </span>knitr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>()</a></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="right">time_primary</th>
@@ -535,27 +535,27 @@ Let’s get started:</p>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="right">15748</td>
+<td align="right">18752</td>
 <td align="left">JPN / NTSC</td>
-<td align="left">Wii Virtual Console</td>
+<td align="left">Nintendo 64</td>
 </tr>
 <tr class="even">
-<td align="right">15756</td>
+<td align="right">17841</td>
 <td align="left">JPN / NTSC</td>
 <td align="left">Wii Virtual Console</td>
 </tr>
 <tr class="odd">
-<td align="right">25479</td>
+<td align="right">17629</td>
 <td align="left">JPN / NTSC</td>
-<td align="left">Wii Virtual Console</td>
+<td align="left">Nintendo 64</td>
 </tr>
 <tr class="even">
-<td align="right">15350</td>
+<td align="right">15317</td>
 <td align="left">JPN / NTSC</td>
 <td align="left">Wii Virtual Console</td>
 </tr>
 <tr class="odd">
-<td align="right">15919</td>
+<td align="right">24385</td>
 <td align="left">JPN / NTSC</td>
 <td align="left">Wii Virtual Console</td>
 </tr>
