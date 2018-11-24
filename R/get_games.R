@@ -12,7 +12,7 @@
 #' \dontrun{
 #' # Get all games matching Ocarina of Time
 #' get_games(name = "Ocarina of Time")
-#'
+#' 
 #' # Or directly if you know its abbreviation is oot:
 #' get_games(abbreviation = "oot")
 #' }
@@ -97,5 +97,5 @@ get_variables_game <- function(game, list_column = FALSE) {
   res <- sr_get(path)
   data <- res$data
 
-  purrr::map_df(data, ~extract_variables(.x, list_column = list_column))
+  purrr::map_df(data, ~ extract_variables(.x, list_column = list_column))
 }

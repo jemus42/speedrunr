@@ -62,7 +62,7 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
 #' @examples
 #' \dontrun{
 #' runs <- get_leaderboards(game = "j1l9qz1g")
-#'
+#' 
 #' add_platforms(runs)
 #' add_regions(runs)
 #' }
@@ -110,7 +110,7 @@ add_players <- function(runs) {
     distinct() %>%
     mutate(player_name = purrr::map_chr(
       player_id,
-      ~purrr::pluck(get_user(id = .x),
+      ~ purrr::pluck(get_user(id = .x),
         "name_int",
         .default = NA
       )
