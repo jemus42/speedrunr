@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 library(speedrunr)
 ```
+
 # speedrunr
 
 [![Travis build status](https://travis-ci.org/jemus42/speedrunr.svg?branch=master)](https://travis-ci.org/jemus42/speedrunr)
@@ -123,10 +124,9 @@ runs %>%
   select(time_primary, system_region, system_platform) %>%
   sample_n(5) %>%
   knitr::kable()
-  
 ```
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+Please note that this project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.

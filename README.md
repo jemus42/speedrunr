@@ -188,14 +188,14 @@ runs %>%
 
 | time\_primary | system\_region | system\_platform    |
 | ------------: | :------------- | :------------------ |
-|         17687 | JPN / NTSC     | Wii Virtual Console |
-|         15719 | JPN / NTSC     | Wii Virtual Console |
-|         20014 | JPN / NTSC     | Nintendo 64         |
-|         17251 | JPN / NTSC     | Wii Virtual Console |
-|         16496 | JPN / NTSC     | Wii Virtual Console |
+|         15412 | JPN / NTSC     | Wii Virtual Console |
+|         18022 | JPN / NTSC     | Wii Virtual Console |
+|         15848 | JPN / NTSC     | Wii Virtual Console |
+|         15269 | JPN / NTSC     | Wii Virtual Console |
+|         15389 | JPN / NTSC     | Wii Virtual Console |
 
 ## Code of Conduct
 
 Please note that this project is released with a [Contributor Code of
-Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree
-to abide by its terms.
+Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project
+you agree to abide by its terms.
