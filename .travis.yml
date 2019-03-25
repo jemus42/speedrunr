@@ -1,17 +1,36 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: false
+sudo: true
 cache: packages
+dist: xenial
 
 addons:
- apt:
-   packages:
-     - libxml2-dev # for XML
+  apt:
+    packages:
+      - libxml2-dev # for XML
+      - libgit2-dev # fpr git2r
 
 r_binary_packages:
+  - testthat
+  - jsonlite
+  - git2r
+  - ps
+  - processx
+  - httr
+  - dplyr
+  - lubridate
+  - purrr
+  - stringr
+  - ggplot2
+  - knitr
+  - rmarkdown
+  - commonmark
+  - highlight
   - xml2
+  - roxygen2
 
 r:
-- release
-- devel
+  - oldrel
+  - release
+  - devel
