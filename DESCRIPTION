@@ -27,7 +27,8 @@ Suggests:
     hrbrthemes,
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    xml2
 VignetteBuilder: 
     knitr
 ByteCompile: true
