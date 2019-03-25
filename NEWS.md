@@ -7,7 +7,7 @@
 * Output changes:
     - `get_runs` now *always* embeds `player` data, adding `player_name` and related columns.
 
-# speedrunr 0.2
+# speedrunr 0.2.0
 
 * Added datasets: `platforms` and `regions` for easier id resolving.
 * Added functions:
@@ -22,7 +22,7 @@
     - `get_categories` now does not fail anymore if one or more categories has no rules.
     - `get_runs` should properly handle pagination (i.e. `max` > 200) now.
 
-# speedrunr 0.1
+# speedrunr 0.1.0
 
 * Added a `NEWS.md` file to track changes to the package.
 * Added functions:

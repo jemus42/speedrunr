@@ -13,7 +13,7 @@ License: MIT + file LICENSE
 URL: https://github.com/jemus42/speedrunr
 BugReports: https://github.com/jemus42/speedrunr/issues
 Depends: 
-    R (>= 2.1)
+    R (>= 2.10)
 Imports: 
     dplyr,
     hms,
