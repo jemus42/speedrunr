@@ -2,7 +2,7 @@
 #'
 #' @param id Optional `id` of a specific platform, normally all platforms are returned.
 #' @inheritParams get_regions
-#' @return A [tibble::tibble] with platform info and ids.
+#' @return A [tibble][tibble::tibble-package] with platform info and ids.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/platforms.md>
 #' @note Currently the `released` variables is dropped on `list` output because I am bad at lists.

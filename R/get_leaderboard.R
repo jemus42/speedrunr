@@ -6,7 +6,7 @@
 #' @param top `[100]`. How many places to return. Note there might be multiple runs per place.
 #' @param ... Optional arguments to the API.
 #'
-#' @return A [tibble::tibble] of length `top` with run data.
+#' @return A [tibble][tibble::tibble-package] of length `top` with run data.
 #' @export
 #'
 #' @examples

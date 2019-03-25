@@ -2,7 +2,7 @@
 #'
 #' @param id Optional `id` of a specific region, normally all regions are returned.
 #' @param output Return a `df` (default) or named `list`.
-#' @return A [tibble::tibble] of region `id` and `name`.
+#' @return A [tibble][tibble::tibble-package] of region `id` and `name`.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/regions.md>
 #'

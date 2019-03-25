@@ -3,7 +3,7 @@
 #' @param id The user id, e.g. `"e8e5v680"` for *zfg*.
 #' @param ... Optional parameters for the api.
 #'
-#' @return A [tibble::tibble] with one row.
+#' @return A [tibble][tibble::tibble-package] with one row.
 #' @export
 #'
 #' @examples

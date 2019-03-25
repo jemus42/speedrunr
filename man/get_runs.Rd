@@ -27,7 +27,7 @@ This option will probably not stick around for long.}
 \item{...}{Optional arguments passed to API.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} of runs.
+A \link[tibble:tibble-package]{tibble} of runs.
 }
 \description{
 Get All Runs Within a Game's Category

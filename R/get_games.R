@@ -5,14 +5,14 @@
 #'        If this is set, `name` will be ignored.
 #' @param ... Other named parameters passed to the API.
 #'
-#' @return A [tibble::tibble] with search results
+#' @return A [tibble][tibble::tibble-package] with search results
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-games>
 #' @examples
 #' \dontrun{
 #' # Get all games matching Ocarina of Time
 #' get_games(name = "Ocarina of Time")
-#' 
+#'
 #' # Or directly if you know its abbreviation is oot:
 #' get_games(abbreviation = "oot")
 #' }

@@ -18,7 +18,7 @@ If this is set, \code{name} will be ignored.}
 \item{...}{Other named parameters passed to the API.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} with search results
+A \link[tibble:tibble-package]{tibble} with search results
 }
 \description{
 Search for Games by Name

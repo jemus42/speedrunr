@@ -4,7 +4,7 @@
 #' @param by Variable that determines record status, either `date` (default) for the date of
 #'   the run, or `submitted` for the time the run was submitted to speedrun.com.
 #'
-#' @return A modified `runs` tbl with a boolean `record` variable.
+#' @return A modified `runs` [tibble][tibble::tibble-package] with a boolean `record` variable.
 #' @export
 #'
 #' @examples
@@ -56,7 +56,7 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
 #'
 #' @param runs A `tbl` of runs as returned by `get_runs` or `get_leaderboards`
 #' @param platforms,regions The platform/region data to use. Uses packaged datasets by default.
-#' @return The input `runs` tbl with resolved `system_`* variables and/or `player_name` column.
+#' @return The input `runs` [tibble][tibble::tibble-package] with resolved `system_`* variables and/or `player_name` column.
 #' @export
 #' @import dplyr
 #' @examples

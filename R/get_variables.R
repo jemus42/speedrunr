@@ -6,7 +6,7 @@
 #'   yielding a flat tbl without nesting.
 #' @param ... Optional arguments passed to the API.
 #'
-#' @return A [tibble::tibble] with the same number of rows as the variable has values if
+#' @return A [tibble][tibble::tibble-package] with the same number of rows as the variable has values if
 #'   `list_column` is `FALSE`, otherwise a single-row tbl with a list-column.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/variables.md>

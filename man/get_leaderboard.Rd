@@ -18,7 +18,7 @@ get_leaderboard(game, category, level = NULL, top = 100, ...)
 \item{...}{Optional arguments to the API.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} of length \code{top} with run data.
+A \link[tibble:tibble-package]{tibble} of length \code{top} with run data.
 }
 \description{
 Get A Leaderboard

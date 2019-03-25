@@ -9,7 +9,7 @@
 #'   This option will probably not stick around for long.
 #' @param ... Optional arguments passed to API.
 #'
-#' @return A [tibble::tibble] of runs.
+#' @return A [tibble][tibble::tibble-package] of runs.
 #' @export
 #' @source <https://github.com/speedruncomorg/api/blob/master/version1/runs.md#get-runs>
 #' @examples

@@ -12,7 +12,7 @@ get_user(id, ...)
 \item{...}{Optional parameters for the api.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} with one row.
+A \link[tibble:tibble-package]{tibble} with one row.
 }
 \description{
 Get a Single User by ID

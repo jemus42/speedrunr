@@ -15,7 +15,7 @@ get_platforms(id = NULL, output = "df")
 \item{output}{Return a \code{df} (default) or named \code{list}.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} with platform info and ids.
+A \link[tibble:tibble-package]{tibble} with platform info and ids.
 }
 \description{
 Get Platforms

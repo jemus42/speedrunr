@@ -15,7 +15,7 @@ get_regions(id = NULL, output = "df")
 \item{output}{Return a \code{df} (default) or named \code{list}.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} of region \code{id} and \code{name}.
+A \link[tibble:tibble-package]{tibble} of region \code{id} and \code{name}.
 }
 \description{
 Get Regions

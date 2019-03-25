@@ -19,7 +19,7 @@ yielding a flat tbl without nesting.}
 \item{...}{Optional arguments passed to the API.}
 }
 \value{
-A \link[tibble:tibble]{tibble::tibble} with the same number of rows as the variable has values if
+A \link[tibble:tibble-package]{tibble} with the same number of rows as the variable has values if
 \code{list_column} is \code{FALSE}, otherwise a single-row tbl with a list-column.
 }
 \description{

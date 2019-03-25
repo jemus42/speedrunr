@@ -13,7 +13,7 @@ find_records(runs, by = "date")
 the run, or \code{submitted} for the time the run was submitted to speedrun.com.}
 }
 \value{
-A modified \code{runs} tbl with a boolean \code{record} variable.
+A modified \code{runs} \link[tibble:tibble-package]{tibble} with a boolean \code{record} variable.
 }
 \description{
 Classify Runs as WR

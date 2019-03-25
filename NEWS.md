@@ -1,5 +1,6 @@
-# speedrunr 0.2.9000
+# speedrunr 0.2.0.9000
 
+* Improved documentation
 * Organizational:
     - Add travis
     - Auto-deploy pkgdown site via travis
