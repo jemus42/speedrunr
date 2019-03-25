@@ -2,6 +2,7 @@
 
 * Organizational:
     - Add travis
+    - Auto-deploy pkgdown site via travis
 * Output changes:
     - `get_runs` now *always* embeds `player` data, adding `player_name` and related columns.
 
