@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -18,6 +20,9 @@ library(speedrunr)
 
 [![Travis build status](https://travis-ci.org/jemus42/speedrunr.svg?branch=master)](https://travis-ci.org/jemus42/speedrunr)
 [![CRAN status](https://www.r-pkg.org/badges/version/speedrunr)](https://cran.r-project.org/package=speedrunr)
+[![GitHub release](https://img.shields.io/github/release/jemus42/speedrunr.svg?logo=GitHub)](https://github.com/jemus42/speedrunr/releases) 
+[![GitHub last commit (master)](https://img.shields.io/github/last-commit/jemus42/speedrunr/master.svg?logo=GithUb)](https://github.com/jemus42/speedrunr/commits/master)
+</div>
 
 The goal of speedrunr is to easily access data from [speedrun.com](https://speedrun.com).
 
@@ -120,7 +125,6 @@ runs %>%
   knitr::kable()
   
 ```
-
 
 ## Code of Conduct
 
