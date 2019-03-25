@@ -1,6 +1,6 @@
 Package: speedrunr
 Title: Access Data from 'speedrun.com'
-Version: 0.2.9000
+Version: 0.2.0.9000
 Authors@R: 
     person(given = "Lukas",
            family = "Burk",
