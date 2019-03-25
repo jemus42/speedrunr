@@ -12,7 +12,7 @@ sr_get(path = "", ...)
 \item{...}{Optional parameters}
 }
 \value{
-A \link{httr} response object
+The \link[httr:content]{httr::content} of the API response.
 }
 \description{
 Call the speedrun.com API

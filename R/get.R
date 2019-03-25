@@ -3,7 +3,7 @@
 #' @param path API path.
 #' @param ... Optional parameters
 #'
-#' @return A [httr] response object
+#' @return The [httr::content] of the API response.
 #' @export
 #'
 #' @examples

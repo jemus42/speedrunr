@@ -62,7 +62,7 @@ is_outlier <- function(x, method = "quantile", direction = "upper") {
 #' @examples
 #' \dontrun{
 #' runs <- get_leaderboards(game = "j1l9qz1g")
-#' 
+#'
 #' add_platforms(runs)
 #' add_regions(runs)
 #' }
@@ -95,6 +95,8 @@ add_regions <- function(runs, regions = speedrunr::regions) {
 
 #' @rdname add_miscdata
 #' @import dplyr
+#' @importFrom purrr pluck
+#' @importFrom purrr map_chr
 #' @export
 add_players <- function(runs) {
   # For R CMD check's global variable thing
@@ -108,9 +110,9 @@ add_players <- function(runs) {
   runs %>%
     select(player_id) %>%
     distinct() %>%
-    mutate(player_name = purrr::map_chr(
+    mutate(player_name = map_chr(
       player_id,
-      ~ purrr::pluck(get_user(id = .x),
+      ~ pluck(get_user(id = .x),
         "name_int",
         .default = NA
       )
