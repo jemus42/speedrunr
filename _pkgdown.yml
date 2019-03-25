@@ -1,3 +1,10 @@
+development:
+  mode: auto
+  destination: "."
+template:
+  params:
+    bootswatch: cosmo
+
 reference:
   - title: The big one
     desc: "Get _all_ runs, suggested to filter by game/category and use the `max` argument."
