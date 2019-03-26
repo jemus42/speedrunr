@@ -110,7 +110,7 @@ library(lubridate)
 
 tmp <- oot100 %>%
   filter(time_hms < hms::hms(hours = 4, minutes = 30),
-         date >= ymd("2018-01-01")) %>%
+         date >= today() - months(6)) %>%
   select(player_name, time_hms, date)
 
 bind_rows(
@@ -121,13 +121,13 @@ bind_rows(
     ungroup
 ) %>%
   {
-    ggplot(., aes(date, time_hms, color = player_name, fill = player_name)) +
+    ggplot(., aes(x = date, y = time_hms, color = player_name, fill = player_name)) +
       geom_point(size = 1, alpha = .75) +
       geom_step() +
       geom_label_repel(data = .
                        %>% group_by(player_name) %>%
                          summarize(y = min(time_hms), x = max(date)),
-                       aes(label = paste0(player_name, ": ", y), x = x, y = y),
+                       aes(label = player_name, x = x, y = y),
                        color = "black", alpha = .75, show.legend = F,
                        hjust = 1, direction = "y", nudge_x = 60^2) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
@@ -136,8 +136,9 @@ bind_rows(
                    minor_breaks = seq(0, 20 * 60^2, 1/24 * 60)) +
       scale_color_brewer(palette = "Dark2", guide = F) +
       scale_fill_brewer(palette = "Dark2", guide = F) +
-      labs(title = "Ocarina of Time: 100% Speedruns in 2018",
-           subtitle = "All data from speedrun.com",
+      labs(title = "Ocarina of Time: 100% Speedruns",
+           subtitle = "All runs of the past 6 months",
+           caption = "Data from speedrun.com",
            x = "Date of Run", y = "Time (H:M:S)") +
       theme_ipsum(grid = "X") + theme(axis.text.x = element_text(hjust = 0))
   }
