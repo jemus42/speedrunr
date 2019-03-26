@@ -31,9 +31,7 @@ r_binary_packages:
   - roxygen2
 
 r:
-  - oldrel
   - release
-  - devel
 
 before_deploy: Rscript -e 'remotes::install_github("jemus42/pkgdown")'
 deploy:
