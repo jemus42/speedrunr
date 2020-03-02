@@ -85,7 +85,7 @@
       <h1>Ocarina of Time 100%</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2019-03-26</h4>
+            <h4 class="date">2020-03-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/speedrunr/blob/master/vignettes/ocarina-of-time-100.Rmd"><code>vignettes/ocarina-of-time-100.Rmd</code></a></small>
       <div class="hidden name"><code>ocarina-of-time-100.Rmd</code></div>
@@ -102,34 +102,32 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(speedrunr)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="../reference/get_games.html">get_games</a></span>(<span class="st">"Ocarina of Time"</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt; # A tibble: 7 x 9</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;   id    name_internatio… name_twitch name_abbr weblink released  </span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;   &lt;date&gt;    </span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt; 1 j1l9… The Legend of Z… The Legend… oot       https:… 1998-11-21</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; 2 kdkj… The Legend of Z… The Legend… ootmq     https:… 2002-01-01</span></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt; 3 268v… The Legend of Z… The Legend… oot3d     https:… 2011-06-16</span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; 4 nd2q… Roblox Ocarina … ROBLOX      root      https:… 2008-10-24</span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt; 5 76rk… Ocarina of Time… The Legend… ootextras https:… 1998-11-21</span></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt; 6 m1zr… Ocarina of Time… Ocarina of… ootbq     https:… 2015-11-13</span></a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt; 7 v1po… SM64: Ocarina o… SM64: Ocar… sm64oot   https:… 2018-03-26</span></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; # … with 3 more variables: released_year &lt;int&gt;, romhack &lt;lgl&gt;,</span></a>
-<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; #   created &lt;dttm&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt; # A tibble: 6 x 9</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;   id    name_internatio… name_twitch name_abbr weblink released   released_year</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;   &lt;date&gt;             &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt; 1 j1l9… The Legend of Z… The Legend… oot       https:… 1998-11-21          1998</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt; 2 kdkj… The Legend of Z… The Legend… ootmq     https:… 2002-01-01          2002</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt; 3 268v… The Legend of Z… The Legend… oot3d     https:… 2011-06-16          2011</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; 4 76rk… Ocarina of Time… The Legend… ootextras https:… 1998-11-21          1998</span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt; 5 m1zr… Ocarina of Time… Ocarina of… ootbq     https:… 2015-11-14          2015</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt; 6 v1po… SM64: Ocarina o… SM64: Ocar… sm64oot   https:… 2018-03-26          2018</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt; # … with 2 more variables: romhack &lt;lgl&gt;, created &lt;dttm&gt;</span></a></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/get_categories.html">get_categories</a></span>(<span class="st">"j1l9qz1g"</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 12 x 6</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;    id     name    link            type  miscellaneous rules                </span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;           &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;                </span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;  1 q255j… 100%    https://www.sp… per-… FALSE         "**100% Rules**:\r\n…</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  2 824qn… 100%    https://www.sp… per-… FALSE         "General Rules:\r\n-…</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  3 zdnoz… All Du… https://www.sp… per-… FALSE         "**All Dungeons Rule…</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  4 z275w… Any%    https://www.sp… per-… FALSE         "**Any% Rules**:\r\n…</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  5 02qe4… Any%    https://www.sp… per-… FALSE         "General Rules:\r\n-…</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  6 9kvr8… Ganonl… https://www.sp… per-… TRUE          "**Ganonless Rules**…</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  7 zd35j… Glitch… https://www.sp… per-… FALSE         ""                   </span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  8 ndxlw… Glitch… https://www.sp… per-… FALSE         "General Rules:\r\n-…</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  9 jdrwr… MST     https://www.sp… per-… FALSE         "**Medallions/Stones…</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 10 9d85y… No IM/… https://www.sp… per-… FALSE         "**No IM/WW Rules**:…</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; 11 xd1wj… No Wro… https://www.sp… per-… TRUE          "**No Wrong Warp Rul…</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; 12 rklm8… Restri… https://www.sp… per-… TRUE          "General Rules:\r\n-…</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;    id     name     link            type   miscellaneous rules                   </span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;  &lt;lgl&gt;         &lt;chr&gt;                   </span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;  1 q255j… 100%     https://www.sp… per-g… FALSE         "# Complete the game by…</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  2 824qn… 100%     https://www.sp… per-l… FALSE         "General Rules:\r\n-The…</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  3 zdnoz… All Dun… https://www.sp… per-g… FALSE         "**All Dungeons Rules**…</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  4 q25g1… Any%     https://www.sp… per-g… FALSE         "**Any% Rules:**\r\n* C…</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  5 02qe4… Any%     https://www.sp… per-l… FALSE         "General Rules:\r\n-The…</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  6 zd35j… Glitchl… https://www.sp… per-g… FALSE         ""                      </span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  7 ndxlw… Glitchl… https://www.sp… per-l… FALSE         "General Rules:\r\n-The…</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  8 9d85y… GSR      https://www.sp… per-g… FALSE         "**Ganondorf Source Req…</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  9 jdrwr… MST      https://www.sp… per-g… FALSE         "**Medallions/Stones/Tr…</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 10 z275w… No ACE   https://www.sp… per-g… FALSE         "**No ACE Rules**:  \r\…</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; 11 xd1wj… No Wron… https://www.sp… per-g… FALSE         "**No Wrong Warp Rules/…</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; 12 rklm8… Restric… https://www.sp… per-l… TRUE          "General Rules:\r\n-The…</span></a></code></pre></div>
 <p>So we’re good.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">game &lt;-<span class="st"> "j1l9qz1g"</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">category &lt;-<span class="st"> "q255jw2o"</span></a>
@@ -137,28 +135,28 @@
 <a class="sourceLine" id="cb3-4" data-line-number="4">oot100 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/get_runs.html">get_runs</a></span>(<span class="dt">game =</span> <span class="st">"j1l9qz1g"</span>, <span class="dt">category =</span> <span class="st">"q255jw2o"</span>, <span class="dt">max =</span> <span class="ot">Inf</span>)</a></code></pre></div>
 <p>Note that I’m useing <code>max = Inf</code> to make sure I get <em>all</em> the runs.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(oot100)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    582 obs. of  22 variables:</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "y43vwl3z" "y430d2dz" "yd3orkxz" "mk9rgxxz" ...</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/y43vwl3z" "https://www.speedrun.com/oot/run/y430d2dz" "https://www.speedrun.com/oot/run/yd3orkxz" "https://www.speedrun.com/oot/run/mk9rgxxz" ...</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    704 obs. of  22 variables:</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;  $ id             : chr  "yv3kwg4z" "yj3vqjgz" "yl02jgky" "z1j6kd9z" ...</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;  $ weblink        : chr  "https://www.speedrun.com/oot/run/yv3kwg4z" "https://www.speedrun.com/oot/run/yj3vqjgz" "https://www.speedrun.com/oot/run/yl02jgky" "https://www.speedrun.com/oot/run/z1j6kd9z" ...</span></a>
 <a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt;  $ game           : chr  "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" "j1l9qz1g" ...</span></a>
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  $ level          : logi  NA NA NA NA NA NA ...</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  $ category       : chr  "q255jw2o" "q255jw2o" "q255jw2o" "q255jw2o" ...</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://www.twitch.tv/videos/398083535" "https://www.twitch.tv/videos/396193532" "https://www.twitch.tv/videos/391649283" "https://www.twitch.tv/videos/391630492" ...</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ videos         : chr  "https://www.twitch.tv/videos/559067992" "https://youtu.be/sQj2cwF1nGU" "https://www.twitch.tv/videos/546236872" "https://www.twitch.tv/videos/541514183" ...</span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  $ status         : chr  "verified" "verified" "verified" "verified" ...</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  NA "didn't expect my second valid run to be a real pb, i think i'm gonna really try to get into it again" "i almost give up but i go get the heart piece i forget and then run up the castle" NA ...</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "kj9m2d7x" "68wvk24x" "kj9m2d7x" "68wvk24x" ...</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/Kneeper" "https://www.speedrun.com/user/gummee" "https://www.speedrun.com/user/Kneeper" "https://www.speedrun.com/user/gummee" ...</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "Kneeper" "gummee" "Kneeper" "gummee" ...</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ comment        : chr  "This run sucks." NA "New wr with SRM Route.\r\n2nd Try Dampe" "FINALLY!! 2nd dampe" ...</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ player_id      : chr  "pj00zwjw" "v819rrxp" "v813d3xp" "v8129yqj" ...</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ player_url     : chr  "https://www.speedrun.com/user/EnNopp112" "https://www.speedrun.com/user/Marco" "https://www.speedrun.com/user/glitchymon" "https://www.speedrun.com/user/AxelLarsen" ...</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ player_name    : chr  "EnNopp112" "Marco" "glitchymon" "AxelLarsen" ...</span></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  $ player_role    : chr  "user" "user" "user" "user" ...</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2019-03-07 08:22:06" "2019-03-07 06:43:08" ...</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2019-03-19" "2019-03-15" ...</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2019-03-20 03:05:21" "2019-03-16 03:20:52" ...</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  19937 18773 21572 19416 16156 15282 16304 15389 16317 20014 ...</span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  19937 18773 21572 19416 16156 15282 16304 15389 16317 20014 ...</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ player_signup  : POSIXct, format: "2015-06-25 15:03:01" "2015-02-17 18:25:39" ...</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ date           : Date, format: "2020-02-27" "2020-02-29" ...</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ submitted      : POSIXct, format: "2020-03-02 08:00:26" "2020-02-29 09:55:40" ...</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ time_primary   : int  15409 13847 13798 14311 17745 22426 25161 19152 22017 18537 ...</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ time_realtime  : int  15409 13847 13798 14311 17745 22426 25161 19152 22017 18537 ...</span></a>
 <a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;  $ time_ingame    : int  0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  05:32:17 05:12:53 05:59:32 05:23:36 ...</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ time_hms       : 'hms' num  04:16:49 03:50:47 03:49:58 03:58:31 ...</span></a>
 <a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt;   ..- attr(*, "units")= chr "secs"</span></a>
-<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "w89rwelk" "nzelreqp" "w89rwelk" ...</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  $ system_platform: chr  "nzelreqp" "nzelreqp" "nzelreqp" "nzelreqp" ...</span></a>
 <a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt;  $ system_emulated: logi  FALSE FALSE FALSE FALSE FALSE FALSE ...</span></a>
 <a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt;  $ system_region  : chr  "o316x197" "o316x197" "o316x197" "o316x197" ...</span></a></code></pre></div>
 <p>We want some additional data:</p>
@@ -185,9 +183,65 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td align="left">03:49:58</td>
+<td align="left">glitchymon</td>
+<td align="left">2020-02-03</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="even">
+<td align="left">03:50:47</td>
+<td align="left">Marco</td>
+<td align="left">2020-02-29</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="odd">
+<td align="left">03:51:34</td>
+<td align="left">glitchymon</td>
+<td align="left">2019-12-18</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="even">
+<td align="left">03:51:39</td>
+<td align="left">zfg</td>
+<td align="left">2019-07-29</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="odd">
+<td align="left">03:52:15</td>
+<td align="left">zfg</td>
+<td align="left">2019-06-10</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="even">
+<td align="left">03:52:21</td>
+<td align="left">glitchymon</td>
+<td align="left">2019-11-26</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="odd">
+<td align="left">03:53:27</td>
+<td align="left">Marco</td>
+<td align="left">2019-12-19</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="even">
 <td align="left">03:53:33</td>
 <td align="left">zfg</td>
 <td align="left">2018-11-27</td>
+<td align="left">Wii Virtual Console</td>
+<td align="left">JPN / NTSC</td>
+</tr>
+<tr class="odd">
+<td align="left">03:54:15</td>
+<td align="left">glitchymon</td>
+<td align="left">2019-10-25</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
@@ -195,62 +249,6 @@
 <td align="left">03:54:52</td>
 <td align="left">zfg</td>
 <td align="left">2018-10-30</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="odd">
-<td align="left">03:56:08</td>
-<td align="left">zfg</td>
-<td align="left">2018-09-22</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">03:57:38</td>
-<td align="left">zfg</td>
-<td align="left">2018-08-20</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="odd">
-<td align="left">03:58:28</td>
-<td align="left">Marco</td>
-<td align="left">2018-10-11</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">03:58:45</td>
-<td align="left">zfg</td>
-<td align="left">2018-08-01</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="odd">
-<td align="left">03:59:17</td>
-<td align="left">Marco</td>
-<td align="left">2018-09-29</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">04:00:47</td>
-<td align="left">Marco</td>
-<td align="left">2018-09-17</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="odd">
-<td align="left">04:01:05</td>
-<td align="left">zfg</td>
-<td align="left">2018-07-27</td>
-<td align="left">Wii Virtual Console</td>
-<td align="left">JPN / NTSC</td>
-</tr>
-<tr class="even">
-<td align="left">04:01:39</td>
-<td align="left">Marco</td>
-<td align="left">2018-09-01</td>
 <td align="left">Wii Virtual Console</td>
 <td align="left">JPN / NTSC</td>
 </tr>
@@ -267,24 +265,24 @@
 <a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(hms)</a>
 <a class="sourceLine" id="cb6-5" data-line-number="5"></a>
 <a class="sourceLine" id="cb6-6" data-line-number="6">oot100 <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(time_hms <span class="op">&lt;</span><span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/hms/topics/hms">hms</a></span>(<span class="dt">hours =</span> <span class="dv">6</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(time_hms <span class="op">&lt;</span><span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="dt">hours =</span> <span class="dv">6</span>)) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb6-8" data-line-number="8"><span class="st">  </span>{</a>
-<a class="sourceLine" id="cb6-9" data-line-number="9">    <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(., <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(date, time_hms)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">2</span>, <span class="dt">data =</span> <span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(., record), <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">color =</span> player_name)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">    <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(., <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(date, time_hms)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">2</span>, <span class="dt">data =</span> <span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(., record), <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">color =</span> player_name)) <span class="op">+</span></a>
 <a class="sourceLine" id="cb6-12" data-line-number="12"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggrepel/topics/geom_text_repel">geom_label_repel</a></span>(<span class="dt">data =</span> <span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(., record),</a>
-<a class="sourceLine" id="cb6-13" data-line-number="13">                       <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">label =</span> time_hms, <span class="dt">color =</span> player_name),</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">                       <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">label =</span> time_hms, <span class="dt">color =</span> player_name),</a>
 <a class="sourceLine" id="cb6-14" data-line-number="14">                       <span class="dt">fill =</span> <span class="st">"white"</span>, <span class="dt">show.legend =</span> F) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_date">scale_x_date</a></span>(<span class="dt">date_breaks =</span> <span class="st">"6 months"</span>, <span class="dt">date_labels =</span> <span class="st">"%b '%y"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_date">scale_y_time</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>,  <span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span>(<span class="dt">date_breaks =</span> <span class="st">"6 months"</span>, <span class="dt">date_labels =</span> <span class="st">"%b '%y"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_y_time</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>,  <span class="dv">1</span><span class="op">/</span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>),</a>
 <a class="sourceLine" id="cb6-17" data-line-number="17">                   <span class="dt">minor_breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>, <span class="dv">5</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_brewer">scale_color_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"Ocarina of Time: 100% Speedrun Record History"</span>,</a>
+<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="dt">title =</span> <span class="st">"Ocarina of Time: 100% Speedrun Record History"</span>,</a>
 <a class="sourceLine" id="cb6-20" data-line-number="20">           <span class="dt">subtitle =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(<span class="st">"All data from speedrun.com (n = "</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(.), <span class="st">")"</span>),</a>
 <a class="sourceLine" id="cb6-21" data-line-number="21">           <span class="dt">x =</span> <span class="st">"Date of Run"</span>, <span class="dt">y =</span> <span class="st">"Time"</span>,</a>
 <a class="sourceLine" id="cb6-22" data-line-number="22">           <span class="dt">color =</span> <span class="st">"Runner"</span>, <span class="dt">caption =</span> <span class="st">"Data limited to sub 6h runs"</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb6-23" data-line-number="23"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/hrbrthemes/topics/theme_ipsum">theme_ipsum</a></span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/theme">theme</a></span>(<span class="dt">legend.position =</span> <span class="st">"top"</span>)</a>
+<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="dt">legend.position =</span> <span class="st">"top"</span>)</a>
 <a class="sourceLine" id="cb6-25" data-line-number="25">  }</a></code></pre></div>
 <p><img src="ocarina-of-time-100_files/figure-html/oot_100_overview-1.png" width="768"></p>
 <p>Please note that the data on speedrun.com does <em>not</em> cover the whole history. There are lots of older runs missing here, and unless the mods come together und do some historic backlogging, that’s as good as it gets for now.</p>
@@ -292,7 +290,7 @@
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(lubridate)</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">tmp &lt;-<span class="st"> </span>oot100 <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(time_hms <span class="op">&lt;</span><span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/hms/topics/hms">hms</a></span>(<span class="dt">hours =</span> <span class="dv">4</span>, <span class="dt">minutes =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(time_hms <span class="op">&lt;</span><span class="st"> </span>hms<span class="op">::</span><span class="kw"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="dt">hours =</span> <span class="dv">4</span>, <span class="dt">minutes =</span> <span class="dv">30</span>),</a>
 <a class="sourceLine" id="cb7-5" data-line-number="5">         date <span class="op">&gt;=</span><span class="st"> </span><span class="kw"><a href="http://lubridate.tidyverse.org/reference/today.html">today</a></span>() <span class="op">-</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/weekday.POSIXt">months</a></span>(<span class="dv">6</span>)) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(player_name, time_hms, date)</a>
 <a class="sourceLine" id="cb7-7" data-line-number="7"></a>
@@ -304,32 +302,40 @@
 <a class="sourceLine" id="cb7-13" data-line-number="13"><span class="st">    </span>ungroup</a>
 <a class="sourceLine" id="cb7-14" data-line-number="14">) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-15" data-line-number="15"><span class="st">  </span>{</a>
-<a class="sourceLine" id="cb7-16" data-line-number="16">    <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(., <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> date, <span class="dt">y =</span> time_hms, <span class="dt">color =</span> player_name, <span class="dt">fill =</span> player_name)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_path">geom_step</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16">    <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(., <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">x =</span> date, <span class="dt">y =</span> time_hms, <span class="dt">color =</span> player_name, <span class="dt">fill =</span> player_name)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_step</a></span>() <span class="op">+</span></a>
 <a class="sourceLine" id="cb7-19" data-line-number="19"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggrepel/topics/geom_text_repel">geom_label_repel</a></span>(<span class="dt">data =</span> .</a>
 <a class="sourceLine" id="cb7-20" data-line-number="20">                       <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(player_name) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-21" data-line-number="21"><span class="st">                         </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span>(<span class="dt">y =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Extremes">min</a></span>(time_hms), <span class="dt">x =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Extremes">max</a></span>(date)),</a>
-<a class="sourceLine" id="cb7-22" data-line-number="22">                       <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">label =</span> player_name, <span class="dt">x =</span> x, <span class="dt">y =</span> y),</a>
+<a class="sourceLine" id="cb7-22" data-line-number="22">                       <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="dt">label =</span> player_name, <span class="dt">x =</span> x, <span class="dt">y =</span> y),</a>
 <a class="sourceLine" id="cb7-23" data-line-number="23">                       <span class="dt">color =</span> <span class="st">"black"</span>, <span class="dt">alpha =</span> <span class="fl">.75</span>, <span class="dt">show.legend =</span> F,</a>
 <a class="sourceLine" id="cb7-24" data-line-number="24">                       <span class="dt">hjust =</span> <span class="dv">1</span>, <span class="dt">direction =</span> <span class="st">"y"</span>, <span class="dt">nudge_x =</span> <span class="dv">60</span><span class="op">^</span><span class="dv">2</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_date">scale_x_date</a></span>(<span class="dt">date_breaks =</span> <span class="st">"1 month"</span>, <span class="dt">date_labels =</span> <span class="st">"%b '%y"</span>,</a>
+<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_x_date</a></span>(<span class="dt">date_breaks =</span> <span class="st">"1 month"</span>, <span class="dt">date_labels =</span> <span class="st">"%b '%y"</span>,</a>
 <a class="sourceLine" id="cb7-26" data-line-number="26">                   <span class="dt">limits =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/as.Date">as.Date</a></span>(<span class="ot">NA</span>), <span class="kw"><a href="http://lubridate.tidyverse.org/reference/today.html">today</a></span>() <span class="op">+</span><span class="st"> </span><span class="kw"><a href="http://lubridate.tidyverse.org/reference/period.html">days</a></span>(<span class="dv">45</span>))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-27" data-line-number="27"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_date">scale_y_time</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">0</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>,  <span class="dv">1</span><span class="op">/</span><span class="dv">12</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb7-27" data-line-number="27"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_date.html">scale_y_time</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">0</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>,  <span class="dv">1</span><span class="op">/</span><span class="dv">12</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>),</a>
 <a class="sourceLine" id="cb7-28" data-line-number="28">                   <span class="dt">minor_breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">0</span>, <span class="dv">20</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span><span class="op">^</span><span class="dv">2</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-29" data-line-number="29"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_brewer">scale_color_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>, <span class="dt">guide =</span> F) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-30" data-line-number="30"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_brewer">scale_fill_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>, <span class="dt">guide =</span> F) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-31" data-line-number="31"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"Ocarina of Time: 100% Speedruns"</span>,</a>
+<a class="sourceLine" id="cb7-29" data-line-number="29"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>, <span class="dt">guide =</span> F) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-30" data-line-number="30"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>, <span class="dt">guide =</span> F) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-31" data-line-number="31"><span class="st">      </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="dt">title =</span> <span class="st">"Ocarina of Time: 100% Speedruns"</span>,</a>
 <a class="sourceLine" id="cb7-32" data-line-number="32">           <span class="dt">subtitle =</span> <span class="st">"All runs of the past 6 months"</span>,</a>
 <a class="sourceLine" id="cb7-33" data-line-number="33">           <span class="dt">caption =</span> <span class="st">"Data from speedrun.com"</span>,</a>
 <a class="sourceLine" id="cb7-34" data-line-number="34">           <span class="dt">x =</span> <span class="st">"Date of Run"</span>, <span class="dt">y =</span> <span class="st">"Time (H:M:S)"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-35" data-line-number="35"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/hrbrthemes/topics/theme_ipsum">theme_ipsum</a></span>(<span class="dt">grid =</span> <span class="st">"X"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/theme">theme</a></span>(<span class="dt">axis.text.x =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/element">element_text</a></span>(<span class="dt">hjust =</span> <span class="dv">0</span>))</a>
-<a class="sourceLine" id="cb7-36" data-line-number="36">  }</a></code></pre></div>
+<a class="sourceLine" id="cb7-35" data-line-number="35"><span class="st">      </span><span class="kw"><a href="https://www.rdocumentation.org/packages/hrbrthemes/topics/theme_ipsum">theme_ipsum</a></span>(<span class="dt">grid =</span> <span class="st">"X"</span>) <span class="op">+</span><span class="st"> </span><span class="kw"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="dt">axis.text.x =</span> <span class="kw"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span>(<span class="dt">hjust =</span> <span class="dv">0</span>))</a>
+<a class="sourceLine" id="cb7-36" data-line-number="36">  }</a>
+<a class="sourceLine" id="cb7-37" data-line-number="37"><span class="co">#&gt; Warning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Dark2 is 8</span></a>
+<a class="sourceLine" id="cb7-38" data-line-number="38"><span class="co">#&gt; Returning the palette you asked for with that many colors</span></a>
+<a class="sourceLine" id="cb7-39" data-line-number="39"></a>
+<a class="sourceLine" id="cb7-40" data-line-number="40"><span class="co">#&gt; Warning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Dark2 is 8</span></a>
+<a class="sourceLine" id="cb7-41" data-line-number="41"><span class="co">#&gt; Returning the palette you asked for with that many colors</span></a>
+<a class="sourceLine" id="cb7-42" data-line-number="42"><span class="co">#&gt; Warning: Removed 2 rows containing missing values (geom_point).</span></a>
+<a class="sourceLine" id="cb7-43" data-line-number="43"><span class="co">#&gt; Warning: Removed 2 rows containing missing values (geom_path).</span></a></code></pre></div>
 <p><img src="ocarina-of-time-100_files/figure-html/oot_100_recents-1.png" width="1152"></p>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
