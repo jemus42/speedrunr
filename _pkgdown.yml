@@ -1,6 +1,7 @@
 development:
   mode: auto
   destination: "."
+url: https://jemus42.github.io/speedrunr
 template:
   params:
     bootswatch: cosmo
