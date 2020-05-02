@@ -13,7 +13,7 @@ get_leaderboard(game, category, level = NULL, top = 100, ...)
 
 \item{level}{The level \code{id}, if a per-level leaderboard is requested.}
 
-\item{top}{\code{[100]}. How many places to return. Note there might be multiple runs per place.}
+\item{top}{\verb{[100]}. How many places to return. Note there might be multiple runs per place.}
 
 \item{...}{Optional arguments to the API.}
 }

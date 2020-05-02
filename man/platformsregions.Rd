@@ -5,10 +5,14 @@
 \alias{platforms}
 \alias{regions}
 \title{Platform and Region data from speedrun.com}
-\format{\describe{
-\item{platforms}{A \code{tibble} with 99 rows and 3 variables: \code{id, name, released}}
-\item{regions}{A \code{tibble} with 6 rows and 2 variables: \code{id, name}}
-}}
+\format{
+\describe{
+\item{platforms}{A \code{tibble} with 99 rows and 3 variables: \verb{id, name, released}}
+\item{regions}{A \code{tibble} with 6 rows and 2 variables: \verb{id, name}}
+}
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 6 rows and 2 columns.
+}
 \usage{
 platforms
 

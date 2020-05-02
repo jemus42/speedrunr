@@ -27,6 +27,8 @@ I like Ocarina of Time 100%. So let's take a look at that.
 First up we need the game's ID and category ID. That's easy:
 
 ```{r}
+library(dplyr)
+library(kableExtra)
 library(speedrunr)
 
 get_games("Ocarina of Time")
@@ -54,9 +56,6 @@ str(oot100)
 We want some additional data:
 
 ```{r}
-library(dplyr)
-library(knitr)
-
 oot100 <- oot100 %>%
   add_platforms() %>%
   add_regions() %>%
@@ -64,9 +63,10 @@ oot100 <- oot100 %>%
 
 oot100 %>% 
   arrange(time_hms) %>%
-  select(time_hms, player_name, date, system_platform, system_region) %>%
+  select(time_hms, record, player_name, date, system_platform, system_region) %>%
   head(10) %>%
-  kable()
+  kable() %>%
+  kable_styling()
 ```
 
 ## Category Overview
@@ -80,7 +80,7 @@ library(hrbrthemes)
 library(hms)
 
 oot100 %>%
-  filter(time_hms < hms::hms(hours = 6)) %>%
+  filter(time_hms < hms::hms(hours = 5)) %>%
   {
     ggplot(., aes(date, time_hms)) +
       geom_point(size = 1, alpha = .75) +
@@ -95,7 +95,7 @@ oot100 %>%
       labs(title = "Ocarina of Time: 100% Speedrun Record History",
            subtitle = paste0("All data from speedrun.com (n = ", nrow(.), ")"),
            x = "Date of Run", y = "Time",
-           color = "Runner", caption = "Data limited to sub 6h runs") +
+           color = "Runner", caption = "Data limited to sub 5h runs") +
       theme_ipsum() +
       theme(legend.position = "top")
   }
@@ -121,21 +121,25 @@ bind_rows(
     ungroup
 ) %>%
   {
-    ggplot(., aes(x = date, y = time_hms, color = player_name, fill = player_name)) +
+    ggplot(., aes(x = date, y = time_hms, 
+                  color = player_name, fill = player_name)) +
       geom_point(size = 1, alpha = .75) +
       geom_step() +
-      geom_label_repel(data = .
-                       %>% group_by(player_name) %>%
-                         summarize(y = min(time_hms), x = max(date)),
-                       aes(label = player_name, x = x, y = y),
-                       color = "black", alpha = .75, show.legend = F,
-                       hjust = 1, direction = "y", nudge_x = 60^2) +
+      geom_label_repel(
+        data = . %>% 
+          group_by(player_name) %>%
+          summarize(y = min(time_hms), x = max(date)),
+        aes(label = player_name, x = x, y = y),
+        color = "black", alpha = .75, show.legend = F,
+        hjust = 1, direction = "y", nudge_x = 60^2
+      ) +
       scale_x_date(date_breaks = "1 month", date_labels = "%b '%y",
                    limits = c(as.Date(NA), today() + days(45))) +
       scale_y_time(breaks = seq(0, 20 * 60^2,  1/12 * 60^2),
                    minor_breaks = seq(0, 20 * 60^2, 1/24 * 60)) +
-      scale_color_brewer(palette = "Dark2", guide = F) +
-      scale_fill_brewer(palette = "Dark2", guide = F) +
+      scale_color_viridis_d(
+        direction = -1, guide = FALSE, aesthetics = c("color", "fill")
+      ) +
       labs(title = "Ocarina of Time: 100% Speedruns",
            subtitle = "All runs of the past 6 months",
            caption = "Data from speedrun.com",

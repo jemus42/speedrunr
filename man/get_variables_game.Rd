@@ -12,7 +12,7 @@ get_variables_game(game, list_column = FALSE)
 \arguments{
 \item{game}{The game's \code{id}}
 
-\item{list_column}{\code{[FALSE]} Whether to return a list column or a flat \code{tbl}.}
+\item{list_column}{\verb{[FALSE]} Whether to return a list column or a flat \code{tbl}.}
 }
 \value{
 A \link[tibble:tibble]{tibble::tibble} with one row per \code{variable} \emph{or}
