@@ -1,6 +1,7 @@
-pandoc: '2.2'
-pkgdown: 1.3.0.9000
-pkgdown_sha: ff17c2fdf052ff3c4c2c7aad8bb596e6ec9f348b
+pandoc: 2.7.3
+pkgdown: 1.5.1
+pkgdown_sha: ~
 articles:
   ocarina-of-time-100: ocarina-of-time-100.html
+last_built: 2020-05-02T21:46Z
 
