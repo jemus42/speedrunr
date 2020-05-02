@@ -6,3 +6,5 @@ experiments.R
 inst/doc
 
 .Rprofile
+
+README_cache
