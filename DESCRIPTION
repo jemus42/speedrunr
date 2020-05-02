@@ -29,7 +29,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat,
-    xml2
+    xml2,
+    kableExtra
 VignetteBuilder: 
     knitr
 ByteCompile: true
