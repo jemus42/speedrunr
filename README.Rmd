@@ -9,21 +9,21 @@ editor_options:
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  cache = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
-
-library(speedrunr)
 ```
 
 # speedrunr
 
-[![Travis build status](https://travis-ci.org/jemus42/speedrunr.svg?branch=master)](https://travis-ci.org/jemus42/speedrunr)
+<!-- badges: start -->
+[![R build status](https://github.com/jemus42/speedrunr/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/speedrunr/actions)
 [![CRAN status](https://www.r-pkg.org/badges/version/speedrunr)](https://cran.r-project.org/package=speedrunr)
 [![GitHub release](https://img.shields.io/github/release/jemus42/speedrunr.svg?logo=GitHub)](https://github.com/jemus42/speedrunr/releases) 
 [![GitHub last commit (master)](https://img.shields.io/github/last-commit/jemus42/speedrunr/master.svg?logo=GithUb)](https://github.com/jemus42/speedrunr/commits/master)
-</div>
+<!-- badges: end -->
 
 The goal of speedrunr is to easily access data from [speedrun.com](https://speedrun.com).
 
@@ -41,8 +41,9 @@ Let's say you want to plot the times of all *Ocarina of TIme 100%* runs.
 Let's get started:
 
 ```{r, message=FALSE, error=FALSE}
-library(dplyr)
-library(knitr)
+library(speedrunr)
+library(dplyr) # Data manip
+library(knitr) # Tables
 ```
 
 
