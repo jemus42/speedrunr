@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Lukas",
            family = "Burk",
            role = c("aut", "cre"),
-           email = "lukas@quantenbrot.de",
+           email = "github@quantenbrot.de",
            comment = c(ORCID = "0000-0001-7528-3795"))
 Description: Wrappers for the 'speedrun.com' API to make it easy
     to access run data.
