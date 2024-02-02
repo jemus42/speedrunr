@@ -1,8 +1,9 @@
 development:
   mode: auto
   destination: "."
-url: https://jemus42.github.io/speedrunr
+url: https://jemus42.github.io/speedrunr/
 template:
+  bootstrap: 5
   params:
     bootswatch: cosmo
 
