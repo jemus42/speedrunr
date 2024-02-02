@@ -6,8 +6,7 @@
 \alias{speedrunr-package}
 \title{speedrunr: Access Data from 'speedrun.com'}
 \description{
-Wrappers for the 'speedrun.com' API to make it easy
-    to access run data.
+Wrappers for the 'speedrun.com' API to make it easy to access run data.
 }
 \seealso{
 Useful links:
@@ -18,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Lukas Burk \email{lukas@quantenbrot.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
+\strong{Maintainer}: Lukas Burk \email{github@quantenbrot.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
 
 }
 \keyword{internal}
