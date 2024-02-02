@@ -1,54 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jemus42.github.io/speedrunr/index.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/add_miscdata.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/find_records.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./ISSUE_TEMPLATE.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_categories.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_games.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_leaderboard.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./SUPPORT.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_platforms.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./articles/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_regions.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./articles/ocarina-of-time-100.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_runs.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./authors.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_user.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_variable.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./news/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/get_variables_game.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/add_miscdata.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/is_outlier.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/find_records.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/platformsregions.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_categories.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/speedrunr-package.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_games.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/reference/sr_get.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_leaderboard.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/speedrunr/articles/ocarina-of-time-100.html</loc>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_platforms.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_regions.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_runs.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_user.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_variable.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/get_variables_game.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/is_outlier.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/platformsregions.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/speedrunr-package.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/speedrunr/./reference/sr_get.html</loc>
   </url>
 </urlset>
