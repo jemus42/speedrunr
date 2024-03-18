@@ -12,6 +12,8 @@ status](https://www.r-pkg.org/badges/version/speedrunr)](https://cran.r-project.
 release](https://img.shields.io/github/release/jemus42/speedrunr.svg?logo=GitHub)](https://github.com/jemus42/speedrunr/releases)
 [![GitHub last commit
 (master)](https://img.shields.io/github/last-commit/jemus42/speedrunr/master.svg?logo=GithUb)](https://github.com/jemus42/speedrunr/commits/master)
+[![No Maintenance
+Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 <!-- badges: end -->
 
 The goal of speedrunr is to easily access data from
